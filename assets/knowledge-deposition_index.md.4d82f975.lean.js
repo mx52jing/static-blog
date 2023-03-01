@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./app.c861182a.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"page"},"headers":[],"relativePath":"knowledge-deposition/index.md"}'),n={name:"knowledge-deposition/index.md"};function a(r,s,d,i,c,p){return o(),t("div")}const m=e(n,[["render",a]]);export{l as __pageData,m as default};
