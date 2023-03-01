@@ -2,6 +2,7 @@
  * @type {import('vitepress').UserConfig}
  */
 export default {
+	base: '/static-blog/',
 	title: 'mx52jing', //站点标题
 	description: 'mx52jing的博客', //mate标签description，多用于搜索引擎抓取摘要
 	themeConfig: {
