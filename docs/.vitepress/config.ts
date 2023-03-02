@@ -12,21 +12,39 @@ export default {
 		smoothScroll: true,
 		// 导航栏配置
 		nav: [
+			{ text: '首页', link: '/' },
 			{ text: '随手笔记', link: '/hand-notes/' },
 			{ text: '知识沉淀', link: '/knowledge-deposition/' },
 		],
 		// 左侧边栏配置
 		sidebar: {
-			'/hand-notes/': [{}],
+			'/hand-notes/': [
+				{
+					text: 'Bash相关',
+					collapsible: true,
+					collapsed: true,
+					items: [
+						{ text: 'Bash实践中用到的方法', link: '/hand-notes/bash/practice-method'}
+					]
+				}
+			],
 			'/knowledge-deposition/': [
 				{
-					text: 'SSH 相关',
+					text: 'SSH 知识',
 					collapsible: true,
 					collapsed: true,
 					items: [
 						{ text: 'SSH基础', link: '/knowledge-deposition/ssh/ssh-base'}
 					]
 				},
+				{
+					text: 'Bash 知识',
+					collapsible: true,
+					collapsed: true,
+					items: [
+						{ text: 'Bash 基础语法', link: '/knowledge-deposition/bash/basic-syntax'}
+					]
+				}
 			]
 		},
 		// 社交账户链接
