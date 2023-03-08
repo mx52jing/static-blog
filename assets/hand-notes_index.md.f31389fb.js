@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.489bffbb.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"hand-notes/index.md"}'),n={name:"hand-notes/index.md"};function o(r,s,c,d,i,p){return a(),t("div")}const f=e(n,[["render",o]]);export{m as __pageData,f as default};
