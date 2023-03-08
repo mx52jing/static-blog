@@ -195,3 +195,394 @@ echo "${str%o*}"
 
 ## 数组
 `bash`支持`一维数组（不支持多维数组）`，并且没有限定数组的大小
+
+### 定义数组
+
+`Shell`中，用`()`来表示数组，数组元素用`空格`符号分割开
+
+```shell
+arr=(值1 值2 ... 值n)
+```
+### 读取数组
+
+```shell
+${数组名[下标]}
+
+arr=(1 2 3 4 5 6)
+echo "${arr[2]}" // 3
+```
+
+#### 获取数组中的所有元素
+
+- 使用`@`或者`*`可以获取数组中的所有元素
+
+```shell
+arr=(1 2 3 4 5 6)
+echo "${arr[@]}" // 1 2 3 4 5 6
+echo "${arr[*]}" // 1 2 3 4 5 6
+```
+
+#### 获取数组的长度
+
+```shell
+arr=(1 2 3 4 5 6)
+echo "数组的长度为${#arr[@]}" // 数组的长度为6
+echo "数组的长度为${#arr[*]}" // 数组的长度为6
+```
+## `Shell`传递参数
+
+脚本内获取参数的格式为：`$n`，n代表一个数字，
+- 1 为执行脚本的第一个参数
+- 2 为执行脚本的第二个参数
+- 以此类推……
+
+## `Shell`基本运算符
+
+支持多种运算符
+- 算数运算符
+- 关系运算符
+- 布尔运算符
+- 字符串运算符
+- 文件测试运算符
+
+原生`bash`不支持简单的数学运算，但是可以通过其他命令来实现，例如`awk`和`expr`，`expr`最常用
+
+```shell
+val=`expr 2 + 2`
+echo "两数之和为: $val" // 两数之和为: 4
+```
+
+`表达式`和`运算符`之间要有`空格`，例如`2+2`是不对的，必须写成`2 + 2`，完整的表达式要被`反引号(``)`包裹
+
+### 算术运算符
+
+```shell
+a=10
+b=20
+```
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|+|加法|`echo expr ${a} + ${b}`，结果为30|
+|-|减法|`echo expr ${a} - ${b}`，结果为-10|
+|*|减法|`echo expr ${a} \* ${b}`，结果为200|
+|/|除法|`echo expr ${a} / ${b}`，结果为0.5|
+|%|取余|`echo expr ${a} % ${b}`，结果为10|
+|=|赋值|`a=${b}`，a为10|
+|==|用于比较两个数字是否相等|`[ $a == $b ]`，返回 false|
+|!=|用于比较两个数字是否不相等|`[ $a != $b ]`，返回 true|
+
+- 注意⚠️：条件表达式要放在方括号之间，并且要有空格，例如: `[$a==$b]`是错误的，必须写成`[ $a == $b ]`
+
+- 注意⚠️：`乘号(*)`前边必须加`反斜杠(\)`才能实现乘法运算
+
+### 关系运算符
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|-eq|检测两个数是否相等，相等返回 true|`[ $a -eq $b ]` 返回 false
+|-ne|检测两个数是否不相等，不相等返回 true|`[ $a -ne $b ]` 返回 true
+|-gt|检测左边的数是否大于右边的，如果是，则返回 true|`[ $a -gt $b ]` 返回 false
+|-lt|检测左边的数是否小于右边的，如果是，则返回 true|`[ $a -lt $b ]` 返回 true
+|-ge|检测左边的数是否大于等于右边的，如果是，则返回 true|`[ $a -ge $b ]` 返回 false
+|-le|检测左边的数是否小于等于右边的，如果是，则返回 true|`[ $a -le $b ]` 返回 true
+
+### 布尔运算符
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|!|非运算，表达式为 true 则返回 false，否则返回 true|`[ ! false ]` 返回true
+|-o|或运算，有一个表达式为 true 则返回 true|`[ $a -lt 20 -o $b -gt 100 ]` 返回true
+|-a|与运算，两个表达式都为 true 才返回 true|`[ $a -lt 20 -a $b -gt 100 ]` 返回false
+
+### 逻辑运算符
+
+**注意要有两个`[]`**
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|&&|逻辑的`AND`|`[[ $a -lt 100 && $b -gt 100 ]]` 返回false
+|\|\||逻辑的`OR`|`[[ $a -lt 100 \|\| $b -gt 100 ]]` 返回true
+
+### 字符串运算符
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|=|检测两个字符串是否相等，相等返回 true|`[ $a = $b ]` 返回 false
+|!=|检测两个字符串是否不相等，不相等返回 true|`[ $a != $b ]` 返回 true
+|-z|检测字符串长度是否为0，为0返回 true|`[ -z $a ]` 返回 false
+|-n|检测字符串长度是否不为0，不为 0 返回true|`[ -n $a ]` 返回 true
+|$|检测字符串是否为空，不为空返回 true|`[ $a ]` 返回 true
+
+### 文件测试运算符
+
+|运算符|说明|举例
+|:-:|:-:|:-:|
+|-b file|检测文件是否是块设备文件，如果是，则返回true|`[ -b $file ]` 返回true/false|
+|-c file|检测文件是否是字符设备文件 ，如果是，则返回true|`[ -c $file ]`返回true/false|
+|-d file|检测文件是否是目录 ，如果是，则返回 true|`[ -d $file ]`返回true/false|
+|-f file|检测文件是否是普通文件（既不是目录，也不是设备文件，如果是，则返回 true|`[ -f $file ]`返回true/false|
+|-g file|检测文件是否设置了SGID位 ，如果是，则返回true|`[ -g $file ]`返回true/false|
+|-k file|检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true|`[ -k $file ]`返回true/false|
+|-p file|检测文件是否是有名管道 ，如果是，则返回 true|`[ -p $file ]`返回true/false|
+|-u file|检测文件是否设置了SUID位 ，如果是，则返回 true|`[ -u $file ]`返回true/false|
+|-r file|检测文件是否可读 ，如果是，则返回true|`[ -r $file ]`返回true/false|
+|-w file|检测文件是否可写 ，如果是，则返回true|`[ -w $file ]`返回true/false|
+|-x file|检测文件是否可执行 ，如果是，则返回true|`[ -x $file ]`返回true/false|
+|-s file|检测文件是否为空（文件大小是否大于0），不为空返回true|`[ -s $file ]`返回true/false|
+|-e file|检测文件（包括目录）是否存在 ，如果是，则返回true|`[ -e $file ]`返回true/false|
+
+## echo命令
+
+### 显示普通字符串
+
+```shell
+echo "str"
+```
+
+### 显示转义字符
+
+```shell
+echo "\"It is a test\""
+```
+
+### 显示变量
+
+```shell
+name="sdfsd"
+echo "${name} as" # sdfsd as
+```
+### 显示换行
+```shell
+echo -e "1 \n2" # -e 开启转义
+# 1
+# 2
+```
+
+### 显示不换行
+```shell
+echo -e "OK! \c" # -e 开启转义 \c 不换行
+echo "It is a test"
+```
+
+### 显示结果定向至文件
+
+```shell
+echo "It is a test" > myfile
+```
+
+### 原样输出字符串，不进行转义或取变量(`用单引号`)
+
+```shell
+echo '$name\"' # $name\"
+```
+
+### 显示命令执行结果
+注意⚠️： 这里使用的是反引号(\`), 而不是单引号 (`'`)
+
+结果将显示当前日期
+
+```shell
+echo `date`
+```
+
+## 流程控制
+
+### if else
+
+```shell
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN 
+fi
+```
+
+```shell
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN
+else
+    command
+fi
+```
+
+```shell
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+```
+
+### for 循环
+
+```shell
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+```
+
+### while 语句
+
+while 循环用于`不断执行一系列命令`，也用于从输入文件中读取数据
+
+```shell
+while condition
+do
+    command
+done
+```
+
+### until 循环
+
+util循环执行一系列命令直至条件为`true`时停止。
+until循环与while循环在处理方式上刚好相反。
+一般`while`循环优于`until`循环，但在某些时候—也只是极少数情况下，until循环更加有用。
+
+```shell
+until condition
+do
+    command
+done
+```
+
+### case ... esac
+
+类似`switch case`
+
+- bash中的每个`case`语句均以`case`关键字开头，后接`case表达式`和`in`关键字。 使用`esac`关键字`关闭case语句`;
+- 可以应用以`|`分隔的多个模式运算符，运算符指示模式列表的终止。包含语句的模式称为子句，并且必须以双分号(`;;`)终止;
+- 星号(`*`)用作定义默认情况的最终模式。当用作最后一种情况时，它用作默认情况;
+
+
+```shell
+case variable in
+  pattern_1)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+  pattern_2)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+esac
+```
+
+```shell
+case $Paltform in  
+    iPhone|iPad)  
+        echo "is IOA"  
+        echo  
+        ;;  
+    Android|android)  
+        echo "is Android"  
+        ;;  
+    *)  
+        echo "默认情况"  
+        ;;  
+esac
+```
+
+## 函数
+
+### 定义函数
+
+```shell
+[ function ] funname [()] {
+    action;
+    [return int;]
+}
+```
+有两种格式定义
+
+- 以函数名称开头，后跟括号
+
+```shell
+function_name(){
+  action;
+}
+```
+
+- 以函数保留字开头，后跟函数名称
+
+```shell
+function function_name() {  
+    commands  
+}
+```
+- 函数返回值：可以显示加：`return`返回，如果不加，将以最后一条命令运行结果，作为返回值，return后跟数值`n(0-255)`
+
+
+```shell
+demoFun(){
+    echo "这是我的第一个 shell 函数!"
+}
+echo "-----函数开始执行-----"
+demoFun
+echo "-----函数执行完毕-----"
+
+#-----函数开始执行-----
+#这是我的第一个 shell 函数!
+#-----函数执行完毕-----
+
+function demoFoo(){
+    echo "这是我的第一个 shell 函数!"
+}
+echo "-----函数开始执行-----"
+demoFoo
+echo "-----函数执行完毕-----"
+
+#-----函数开始执行-----
+#这是我的第一个 shell 函数!
+#-----函数执行完毕-----
+```
+
+### 函数参数
+调用函数时可以向其传递参数。在函数体内部，通过`$n`的形式来获取参数的值，例如，`$1`表示`第一个`参数，`$2`表示`第二个`参数...
+
+```shell
+funWithParam(){
+    echo "第一个参数为 $1 !"
+    echo "第二个参数为 $2 !"
+    echo "第十个参数为 $10 !"
+    echo "第十个参数为 ${10} !"
+    echo "第十一个参数为 ${11} !"
+    echo "参数总数有 $# 个!"
+    echo "作为一个字符串输出所有参数 $* !"
+}
+funWithParam 1 2 3 4 5 6 7 8 9 34 73
+
+#
+#第一个参数为 1 !
+#第二个参数为 2 !
+#第十个参数为 10 !
+#第十个参数为 34 !
+#第十一个参数为 73 !
+#参数总数有 11 个!
+#作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
+```
+### 输入/输出重定向
+
+|设备|	设备文件名|文件描述符|类型
+|:-:|:-:|:-:|:-:|
+|键盘|`/dev/stdin`|0|标准输入
+|显示器|`/dev/stdout`|1|标准输出
+|显示器|`/dev/stderr`|2|标准错误输出|

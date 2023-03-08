@@ -51,6 +51,7 @@ export default {
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/mx52jing" },
 		],
+		lastUpdatedText: "最近更新时间"
 		// 页面底部
 		// footer: {
 		// 	message: '感谢浏览',
