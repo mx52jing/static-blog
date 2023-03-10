@@ -1,4 +1,8 @@
-# Bash实践中用到的方法记录
+---
+layout: doc
+---
+
+# Bash实践
 
 ## 通过路径提取文件名称/目录
 
@@ -25,7 +29,9 @@ str="./a/dsa/fwe/s.pkg"
 echo ${str##*/}
 ```
 ### 使用`dirname`获取文件所在目录
-注意⚠️：该方法不仅可以提取文件所在的目录，还能提取目录所在的目录
+::: tip
+该方法不仅可以提取文件所在的目录，还能提取目录所在的目录
+:::
 使用方法：
 ```shell
 dirname NAME
@@ -114,7 +120,9 @@ done
 
 ## 获取当前时间
 
-注意⚠️： `date`后面有一个空格，否则无法识别命令
+::: tip
+`date` 后面有一个空格，否则无法识别命令
+:::
 
 - `Y`显示`4位年份`，例如`2023`
 - `y`显示`2位年份`，例如`23`
@@ -137,4 +145,45 @@ echo ${day}
 # 打印
 # 2023-01-05 16:08:29
 # 01/05/23
+```
+
+## 使用`read`和用户交互
+
+- `read`命令可以用作与用户的交互中，需要用户去输入一些信息
+
+```shell
+read [options] [设置需要获取的变量名]
+```
+|options|含义|
+|:-:|:-:|
+|-p|提示信息，在等待`read`输入时的`提示信息`|
+|-t|等待用户输入的`秒数`: `read`命令会一直等待用户输入，超过这个时间自动走到下一条命令
+|-n|当用户输入的字符等于`n`指定的数字时，就自动进入下一条命令
+|-s|隐藏数据，一般在需要`输入密码`时使用
+
+## 重定向输入和输出
+
+将输入/输出内容重定向到`/dev/null`文件中
+
+例如：获取当前登录的`npm`用户，如果没有获取到，就登录
+
+```shell
+loginName=$(npm whoami 2>/dev/null)
+if [ -z ${loginName} ]
+then
+    echo "请先登录"
+    npm login
+fi
+```
+
+- 如果当前命令行未登录`npm`账号，会报如下错误，如果已登录，则会返回当前登录的`npm账号名称`
+- 我们在上面将`错误输出`重定向到了`/dev/null`文件中，这样如果未登录就避免报错，而是得到了空字符串
+
+```shell
+npm ERR! code ENEEDAUTH
+npm ERR! need auth This command requires you to be logged in.
+npm ERR! need auth You need to authorize this machine using `npm adduser`
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/xxx/.npm/_logs/2023-03-10T15_19_28_286Z-debug-0.log
 ```

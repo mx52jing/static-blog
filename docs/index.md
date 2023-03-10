@@ -1,6 +1,5 @@
 ---
 layout: home
-
 hero:
   name: mx52jing的博客
   text: 前端路上的点滴
