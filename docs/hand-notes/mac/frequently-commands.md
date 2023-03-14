@@ -114,7 +114,7 @@ Error: No formulae found in taps.
 
 ```shell
 Homebrew 3.5.4
-Homebrew/homebrew-core (no Git repository)
+Homebrew/homebrew-core (no git repository)
 Homebrew/homebrew-cask (git revision 9a5bb968b6; last commit 2022-07-12)
 ```
 发现`homebrew-core`不存在
@@ -145,7 +145,7 @@ brew tap homebrew/core
 再次执行`brew -v`发现展示正常
 ```shell
 Homebrew 3.5.4-41-g8b3ff3d
-Homebrew/homebrew-core (no Git repository)
+Homebrew/homebrew-core (no git repository)
 Homebrew/homebrew-cask (git revision 9a5bb968b6; last commit 2022-07-12)
 ```
 

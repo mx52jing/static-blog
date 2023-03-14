@@ -16,21 +16,27 @@ export default {
 		// 导航栏配置
 		nav: [
 			{ text: '首页', link: '/' },
-			{ text: '随手一记', link: '/hand-notes/bash/practice-method' },
-			{ text: '知识沉淀', link: '/knowledge-deposition/ssh/ssh-base' },
+			{ text: '随手一记', link: '/hand-notes/' },
+			{ text: '知识沉淀', link: '/knowledge-deposition/' },
+			{ text: '收藏夹', link: '/favorites/' },
 		],
 		// 左侧边栏配置
 		sidebar: {
 			'/hand-notes/': [
 				{
 					text: 'Bash',
+					collapsible: false,
+					collapsed: true,
 					items: [
 						{ text: 'Bash实践记录', link: '/hand-notes/bash/practice-method'}
 					]
 				},
 				{
 					text: 'Mac',
+					collapsible: false,
+					collapsed: true,
 					items: [
+						{ text: '环境初始化', link: '/hand-notes/mac/init'},
 						{ text: '使用小记', link: '/hand-notes/mac/frequently-commands'}
 					]
 				}
@@ -38,16 +44,27 @@ export default {
 			'/knowledge-deposition/': [
 				{
 					text: 'SSH',
+					collapsible: false,
+					collapsed: true,
 					items: [
 						{ text: 'SSH基础', link: '/knowledge-deposition/ssh/ssh-base'}
 					]
 				},
 				{
 					text: 'Bash',
+					collapsible: false,
+					collapsed: true,
 					items: [
 						{ text: 'Bash 基础语法', link: '/knowledge-deposition/bash/basic-syntax'}
 					]
 				}
+			],
+			'/favorites/': [
+				{ text: 'Nginx', link: '/favorites/nginx/' },
+				{ text: 'CSS', link: '/favorites/css/' },
+				{ text: 'Mac', link: '/favorites/mac/' },
+				{ text: 'Mobile Side', link: '/favorites/mobile/' },
+				{ text: 'Git', link: '/favorites/git/' },
 			]
 		},
 		// 社交账户链接
@@ -67,7 +84,7 @@ export default {
 		// markdown: {
 		// 	lineNumbers: true,
 		// },
-		lastUpdated: "Last Updated", // 设置展示最后更新时间
+		lastUpdated: true, // 设置展示最后更新时间
 		aside: true, // 展示右侧 文章标题
 		outline: 'deep', // 设置右侧文章标题展示多级，而不是只有一级
 	}

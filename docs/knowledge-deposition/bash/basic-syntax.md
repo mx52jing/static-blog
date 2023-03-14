@@ -140,7 +140,7 @@ echo "${a:1:6}" // ello w
 ```shell
 #!/bin/bash
 string="runoob is a great site"
-echo `expr index "$string" io`  # 输出 4
+echo `expr index.md "$string" io`  # 输出 4
 ```
 ### 提取字符串
 
