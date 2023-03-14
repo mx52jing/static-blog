@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as i,a as t}from"./app.7b23ef89.js";const m=JSON.parse('{"title":"收藏夹","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"favorites/index.md"}'),r={name:"favorites/index.md"},o=t("",2),n=[o];function s(_,c,l,d,h,f){return i(),a("div",null,n)}const u=e(r,[["render",s]]);export{m as __pageData,u as default};
