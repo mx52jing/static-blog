@@ -21,7 +21,7 @@ sudo dnf install openssh-clients
 安装成功后，查看`ssh`版本号
 
 ```shell
-ssh -V
+SSH -V
 ```
 
 ## 登录服务器
@@ -29,11 +29,11 @@ ssh -V
 
 ### 通过密码登录
 ```shell
-ssh user@hostname
+SSH user@hostname
 # 另外一种写法
-ssh -l username hostname
+SSH -l username hostname
 # 指定端口号
-ssh -l username -p port hostname
+SSH -l username -p port hostname
 ```
 - `username`就是服务器用户名
 - `hostname`是`主机名`，它可以是`ip地址`，也可以是`域名`
@@ -42,8 +42,8 @@ ssh -l username -p port hostname
 ### 修改密钥权限，以防他人读取
 
 ```shell
-chmod 600 ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa.pub
+chmod 600 ~/.SSH/id_rsa
+chmod 600 ~/.SSH/id_rsa.pub
 ```
 ### 通过自定义配置文件快速登录
 
@@ -69,26 +69,26 @@ Host myServer1
 - 通过`ssh-keygen`命令生成密钥
 
 ```shell
-ssh-keygen -t ras -C "youremail@example.com"
+SSH-keygen -t ras -C "youremail@example.com"
 ```
 
 - 将生成的公钥上传到服务器
 
 ```shell
 # 复制公钥
-pbcopy < ~/.ssh/id_rsa.pub
+pbcopy < ~/.SSH/id_rsa.pub
 # 登录服务器，并粘贴公钥
-ssh user@hostname
-vim ~/.ssh/authorized_keys
-# 将复制的公钥粘贴到(~/.ssh/authorized_keys)文件内，保存并退出
+SSH user@hostname
+vim ~/.SSH/authorized_keys
+# 将复制的公钥粘贴到(~/.SSH/authorized_keys)文件内，保存并退出
 ```
 
 - 退出服务器后，重新登录服务器
 
 ```shell
-ssh user@hostname
-# 或者如果配置了~/.ssh/config文件的话，可以直接用下面这种方式
-ssh myServer
+SSH user@hostname
+# 或者如果配置了~/.SSH/config文件的话，可以直接用下面这种方式
+SSH myServer
 ```
 
 **如果还是需要输入密码可以从以下几个方面排查**
@@ -97,11 +97,11 @@ ssh myServer
 
 ```shell
 PubkeyAuthentication yes
-AuthorizedKeysFile .ssh/authorized_keys
+AuthorizedKeysFile .SSH/authorized_keys
 ```
 - 同时修改`/etc/ssh/authorized_keys`文件权限，因为如果权限不对，`SSH`服务器可能会拒绝读取该文件
 ```shell
-chmod 644 ~/.ssh/authorized_keys
+chmod 644 ~/.SSH/authorized_keys
 ```
 - 重新启动`sshd`
 ```shell
@@ -120,9 +120,9 @@ PasswordAuthentication no
 上面在上传公钥的时候，是手动`copy`并且登录服务器上传的，我们还可以使用`ssh-copy-id`自动上传
 
 ```shell
-ssh-copy-id -i 本机电脑公钥文件名(一般是id_rsa) user@hostname
-# 公钥文件可以不指定路径和.pub后缀名，ssh-copy-id会自动在~/.ssh目录里面寻找，如下示例
-ssh-copy-id -i id_rsa user@hostname
+SSH-copy-id -i 本机电脑公钥文件名(一般是id_rsa) user@hostname
+# 公钥文件可以不指定路径和.pub后缀名，SSH-copy-id会自动在~/.ssh目录里面寻找，如下示例
+SSH-copy-id -i id_rsa user@hostname
 ```
 - `-i`参数用来指定公钥文件
 - `ssh-copy-id`会采用密码登录，系统会提示输入远程服务器的密码
@@ -162,11 +162,11 @@ Please type 'yes', 'no' or the fingerprint:
 
 `-C`后面一般是写自己的邮箱
 ```shell
-ssh-keygen -t rsa -C "youremail@example.com"
+SSH-keygen -t rsa -C "youremail@example.com"
 ```
 ### `-f`指定生成的密钥文件路径
 ```shell
-ssh-keygen -t rsa -f ~/.ssh/mykey -C "xx@aa.com"
+SSH-keygen -t rsa -f ~/.SSH/mykey -C "xx@aa.com"
 ```
 上面命令会在`~/.ssh`文件夹下面生成`mykey`和`mykey.pub`文件
 
@@ -175,7 +175,7 @@ ssh-keygen -t rsa -f ~/.ssh/mykey -C "xx@aa.com"
 `-F`参数查询`~/.ssh/known_hosts`文件内是否存在某个服务(域名/IP)
 
 ```shell
-ssh-keygen -F 66.88.66.8
+SSH-keygen -F 66.88.66.8
 ```
 - 如果没找到，什么也不输出
 - 如果找到相关服务，会输出如下所示：
@@ -188,11 +188,11 @@ ssh-keygen -F 66.88.66.8
 
 `-R`参数将已经存在`~/.ssh/known_hosts`文件内的某个`服务器指纹`删除
 ```shell
-ssh-keygen -R 66.88.66.8
+SSH-keygen -R 66.88.66.8
 
 # # Host 66.88.66.8 found: line 13
-# /Users/xxx/.ssh/known_hosts updated.
-# Original contents retained as /Users/xxx/.ssh/known_hosts.old
+# /Users/xxx/.SSH/known_hosts updated.
+# Original contents retained as /Users/xxx/.SSH/known_hosts.old
 ```
 
 ### -t 指定生成密钥的算法
@@ -200,34 +200,34 @@ ssh-keygen -R 66.88.66.8
 `-t`参数用于指定生成密钥的加密算法，一般是`rsa`或者`dsa`，现在也可以使用新的加密方式`ed25519`
 
 ```shell
-ssh-keygen -t ed25519 -C "your_email@example.com"
+SSH-keygen -t ed25519 -C "your_email@example.com"
 ```
 ## 配置多个ssh-key适配github多账号
 
 - 使用`ssh-keygen`命令生成两个不同的密钥
 ```shell
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_exampl1 -C "exampl1.com"
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_exampl2 -C "exampl2.com"
+SSH-keygen -t rsa -f ~/.SSH/id_rsa_exampl1 -C "exampl1.com"
+SSH-keygen -t rsa -f ~/.SSH/id_rsa_exampl2 -C "exampl2.com"
 ```
 - 配置`~/.ssh/config`文件
 ```shell
 Host  github.example1.com
 			HostName github.com
 			PreferredAuthentications publickey
-			IdentityFile ~/.ssh/id_rsa_example1
+			IdentityFile ~/.SSH/id_rsa_example1
 Host  github.example2.com
 			HostName github.com
 			PreferredAuthentications publickey
-			IdentityFile ~/.ssh/id_rsa_example2
+			IdentityFile ~/.SSH/id_rsa_example2
 ```
 如果要使用`example1.com`邮箱生成的`ssh-key`添加远程链接，修改`github.com`为该邮箱的`ssh-key`对应的`Host`，如下：
 
 原先添加远程`remote`的命令为
 ```shell
-git remote add origin git@github.com:username/projectName.git
+Git remote add origin Git@github.com:username/projectName.Git
 ```
 修改为
 ```shell
-git remote add origin git@github.exampl1.com:username/projectName.git
+Git remote add origin Git@github.exampl1.com:username/projectName.Git
 ```
 

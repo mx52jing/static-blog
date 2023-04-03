@@ -24,11 +24,27 @@ export default {
 		sidebar: {
 			'/hand-notes/': [
 				{
+					text: 'CSS',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{
+							text: 'CSS效果',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: 'CSS实现文字渐变', 'link': '/hand-notes/CSS/CSS效果/CSS实现文字渐变'}
+							]
+						}
+					]
+				},
+				{
 					text: 'Bash',
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: 'Bash实践记录', link: '/hand-notes/bash/practice-method'}
+						{ text: 'Bash实用方法', link: '/hand-notes/Bash/practice-method'},
+						{ text: 'Bash脚本', link: '/hand-notes/Bash/Bash-scripts'},
 					]
 				},
 				{
@@ -36,8 +52,8 @@ export default {
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: '环境初始化', link: '/hand-notes/mac/init'},
-						{ text: '使用小记', link: '/hand-notes/mac/frequently-commands'}
+						{ text: '环境初始化', link: '/hand-notes/Mac/init'},
+						{ text: '使用小记', link: '/hand-notes/Mac/frequently-commands'}
 					]
 				}
 			],
@@ -47,7 +63,7 @@ export default {
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: 'SSH基础', link: '/knowledge-deposition/ssh/ssh-base'}
+						{ text: 'SSH基础', link: '/knowledge-deposition/SSH/SSH-base'}
 					]
 				},
 				{
@@ -55,16 +71,33 @@ export default {
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: 'Bash 基础语法', link: '/knowledge-deposition/bash/basic-syntax'}
+						{ text: 'Bash 基础知识', link: '/knowledge-deposition/Bash/基础知识'}
 					]
-				}
+				},
+				// {
+				// 	text: 'GoLang',
+				// 	collapsible: false,
+				// 	collapsed: true,
+				// 	items: [
+				// 		{
+				// 			text: '基础知识',
+				// 			collapsible: false,
+				// 			collapsed: true,
+				// 			items: [
+				// 				{ text: '环境搭建', link: '/knowledge-deposition/GoLang/基础知识/环境搭建'},
+				// 				{ text: '变量常量', link: '/knowledge-deposition/GoLang/基础知识/变量常量'},
+				// 				{ text: '循环分支', link: '/knowledge-deposition/GoLang/基础知识/循环分支'}
+				// 			]
+				// 		}
+				// 	]
+				// }
 			],
 			'/favorites/': [
-				{ text: 'Nginx', link: '/favorites/nginx/' },
-				{ text: 'CSS', link: '/favorites/css/' },
-				{ text: 'Mac', link: '/favorites/mac/' },
-				{ text: 'Mobile Side', link: '/favorites/mobile/' },
-				{ text: 'Git', link: '/favorites/git/' },
+				{ text: 'CSS', link: '/favorites/CSS/' },
+				{ text: 'Git', link: '/favorites/Git/' },
+				{ text: 'Mobile Side', link: '/favorites/Mobile/' },
+				{ text: 'Nginx', link: '/favorites/Nginx/' },
+				{ text: 'Mac', link: '/favorites/Mac/' },
 			]
 		},
 		// 社交账户链接
@@ -87,5 +120,8 @@ export default {
 		lastUpdated: true, // 设置展示最后更新时间
 		aside: true, // 展示右侧 文章标题
 		outline: 'deep', // 设置右侧文章标题展示多级，而不是只有一级
+	},
+	vite: {
+		plugins: []
 	}
 }

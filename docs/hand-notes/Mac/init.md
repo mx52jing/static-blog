@@ -10,7 +10,7 @@ layout: doc
 [官网地址](https://brew.sh/)
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/Bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 `brew`所有命令执行完注意查看`warning`或相应提示，避免掉坑，例如`M1`环境安装后会有以下提示
 

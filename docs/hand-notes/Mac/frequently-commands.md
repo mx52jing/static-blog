@@ -114,8 +114,8 @@ Error: No formulae found in taps.
 
 ```shell
 Homebrew 3.5.4
-Homebrew/homebrew-core (no git repository)
-Homebrew/homebrew-cask (git revision 9a5bb968b6; last commit 2022-07-12)
+Homebrew/homebrew-core (no Git repository)
+Homebrew/homebrew-cask (Git revision 9a5bb968b6; last commit 2022-07-12)
 ```
 发现`homebrew-core`不存在
 
@@ -128,9 +128,9 @@ Warning: Homebrew/homebrew-core was not tapped properly! Run:
   rm -rf "/opt/homebrew/Library/Taps/homebrew/homebrew-core"
   brew tap homebrew/core
 
-Warning: Some taps are not on the default git origin branch and may not receive
+Warning: Some taps are not on the default Git origin branch and may not receive
 updates. If this is a surprise to you, check out the default branch with:
-  git -C $(brew --repo homebrew/core) checkout master
+  Git -C $(brew --repo homebrew/core) checkout master
 ```
 - 根据输出提示来修复问题
 
@@ -145,11 +145,11 @@ brew tap homebrew/core
 再次执行`brew -v`发现展示正常
 ```shell
 Homebrew 3.5.4-41-g8b3ff3d
-Homebrew/homebrew-core (no git repository)
-Homebrew/homebrew-cask (git revision 9a5bb968b6; last commit 2022-07-12)
+Homebrew/homebrew-core (no Git repository)
+Homebrew/homebrew-cask (Git revision 9a5bb968b6; last commit 2022-07-12)
 ```
 
 如果还有第二个`Warning`的问题，再执行一次
 ```shell
-git -C $(brew --repo homebrew/core) checkout master
+Git -C $(brew --repo homebrew/core) checkout master
 ```

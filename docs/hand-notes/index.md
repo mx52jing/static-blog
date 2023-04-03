@@ -3,5 +3,6 @@ layout: doc
 ---
 # 随手一记
 
-- [Bash](./bash/practice-method)
-- [Mac](./mac/init)
+- [CSS](./CSS/CSS效果/CSS实现文字渐变.md)
+- [Bash](Bash/practice-method)
+- [Mac](Mac/init)
