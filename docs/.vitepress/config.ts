@@ -74,23 +74,26 @@ export default {
 						{ text: 'Bash 基础知识', link: '/knowledge-deposition/Bash/基础知识'}
 					]
 				},
-				// {
-				// 	text: 'GoLang',
-				// 	collapsible: false,
-				// 	collapsed: true,
-				// 	items: [
-				// 		{
-				// 			text: '基础知识',
-				// 			collapsible: false,
-				// 			collapsed: true,
-				// 			items: [
-				// 				{ text: '环境搭建', link: '/knowledge-deposition/GoLang/基础知识/环境搭建'},
-				// 				{ text: '变量常量', link: '/knowledge-deposition/GoLang/基础知识/变量常量'},
-				// 				{ text: '循环分支', link: '/knowledge-deposition/GoLang/基础知识/循环分支'}
-				// 			]
-				// 		}
-				// 	]
-				// }
+				{
+					text: 'GoLang',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{
+							text: '基础知识',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: '环境搭建', link: '/knowledge-deposition/GoLang/基础知识/环境搭建'},
+								{ text: 'fmt格式输出含义', link: '/knowledge-deposition/GoLang/基础知识/fmt输出含义' },
+								{ text: '变量常量', link: '/knowledge-deposition/GoLang/基础知识/变量常量'},
+								{ text: '循环分支', link: '/knowledge-deposition/GoLang/基础知识/循环分支'},
+								{ text: '基础数据类型', link: '/knowledge-deposition/GoLang/基础知识/基础数据类型'},
+								{ text: '数组、切片、Map', link: '/knowledge-deposition/GoLang/基础知识/数组、切片、Map'}
+							]
+						}
+					]
+				}
 			],
 			'/favorites/': [
 				{ text: 'CSS', link: '/favorites/CSS/' },
