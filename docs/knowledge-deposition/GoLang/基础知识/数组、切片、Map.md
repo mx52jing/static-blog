@@ -189,22 +189,25 @@ func createSlice() {
 
 	slice_two := []int{}
 	fmt.Println(slice_two) // []
-
+  
 	var slice_three = []string{"张环", "李朗"} 
 	fmt.Println(slice_three) // [张环 李朗]
 
 	slice_four := []int{22, 66, 88} 
 	fmt.Println(slice_four) // [22 66 88]
 	
+	// 通过指定索引为slice中的元素赋值
 	slice_five := []int{1: 22, 5: 88}
 	fmt.Println(slice_five) // [0 22 0 0 0 88]
 	
+	// int类型的slice 未赋值的元素默认值为 0
 	slice_six := make([]int, 3, 3)
 	fmt.Println(slice_six) // [0 0 0]
 
 	slice_seven := make([]int, 2, 6)
 	fmt.Println(slice_seven) // [0 0]
   
+  // 使用append方法向slice中添加元素
 	slice_seven = append(slice_seven, 2)
 	slice_seven = append(slice_seven, 4)
 	slice_seven = append(slice_seven, 6)
@@ -256,7 +259,7 @@ func testLenCap() {
 	age := make([]int, 2, 6)
 	fmt.Println(age, len(age), cap(age)) // [0 0] 2 6
 	
-	// panic: runtime error: index out of range [7] with length 2
+	// 超出切片容量会报错 panic: runtime error: index out of range [7] with length 2
 	fmt.Println(age[7]) 
 }
 
@@ -320,6 +323,7 @@ func main() {
 
 ### 为切片追加元素
 
+`append`方法如下所示：
 ```Go
 func append(slice []Type, elems ...Type) []Type
 
@@ -343,7 +347,8 @@ func sliceAppend() {
 	age := []int{18}
 	// [18] 1 1
 	fmt.Println(age, len(age), cap(age))
-
+  
+  // 通过append方法向切片中添加元素后，切片的长度和容量都会自动增大
 	age = append(age, 22)
 	// [18 22] 2 2
 	fmt.Println(age, len(age), cap(age))
