@@ -24,6 +24,21 @@ export default {
 		sidebar: {
 			'/hand-notes/': [
 				{
+					text: 'Chart',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{
+							text: 'AntVF2',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: '使用小记', link: '/hand-notes/Chart/AntVF2/使用小记'}
+							]
+						}
+					]
+				},
+				{
 					text: 'CSS',
 					collapsible: false,
 					collapsed: true,
@@ -59,6 +74,14 @@ export default {
 			],
 			'/knowledge-deposition/': [
 				{
+					text: 'Babel',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{ text: 'Babel基础', link: '/knowledge-deposition/Babel/Babel基础'}
+					]
+				},
+				{
 					text: 'SSH',
 					collapsible: false,
 					collapsed: true,
@@ -87,9 +110,51 @@ export default {
 				// 				{ text: '环境搭建', link: '/knowledge-deposition/GoLang/基础知识/环境搭建'},
 				// 				{ text: 'fmt格式输出含义', link: '/knowledge-deposition/GoLang/基础知识/fmt输出含义' },
 				// 				{ text: '变量常量', link: '/knowledge-deposition/GoLang/基础知识/变量常量'},
-				// 				{ text: '循环分支', link: '/knowledge-deposition/GoLang/基础知识/循环分支'},
+				// 				{ text: '流程控制', link: '/knowledge-deposition/GoLang/基础知识/流程控制'},
 				// 				{ text: '基础数据类型', link: '/knowledge-deposition/GoLang/基础知识/基础数据类型'},
-				// 				{ text: '数组、切片、Map', link: '/knowledge-deposition/GoLang/基础知识/数组、切片、Map'}
+				// 				{ text: '数组、切片、Map', link: '/knowledge-deposition/GoLang/基础知识/数组、切片、Map'},
+				// 				{ text: 'strings包', link: '/knowledge-deposition/GoLang/基础知识/strings包'},
+				// 				{ text: '函数', link: '/knowledge-deposition/GoLang/基础知识/函数'},
+				// 				{ text: '指针', link: '/knowledge-deposition/GoLang/基础知识/指针'},
+				// 				{ text: '结构体', link: '/knowledge-deposition/GoLang/基础知识/结构体'},
+				// 				{ text: '接口', link: '/knowledge-deposition/GoLang/基础知识/接口'},
+				// 				{ text: '协程', link: '/knowledge-deposition/GoLang/基础知识/协程'},
+				// 				{ text: '协程安全', link: '/knowledge-deposition/GoLang/基础知识/协程安全'},
+				// 				{ text: '通道channel', link: '/knowledge-deposition/GoLang/基础知识/通道channel'},
+				// 				{ text: 'Select', link: '/knowledge-deposition/GoLang/基础知识/Select'},
+				// 				{ text: 'time包', link: '/knowledge-deposition/GoLang/基础知识/time包'},
+				// 				{ text: 'json序列化', link: '/knowledge-deposition/GoLang/基础知识/json序列化'},
+				// 				{
+				// 					text: '文件操作',
+				// 					collapsible: false,
+				// 					collapsed: true,
+				// 					link: '/knowledge-deposition/GoLang/基础知识/文件操作/',
+				// 					items: [
+				// 						{ text: "读文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/读文件' },
+				// 						{ text: "写文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/写文件' },
+				// 						{ text: "文件复制", link: '/knowledge-deposition/GoLang/基础知识/文件操作/文件复制' },
+				// 						{ text: "目录操作", link: '/knowledge-deposition/GoLang/基础知识/文件操作/目录操作' },
+				// 					]
+				// 				},
+				// 				{
+				// 					text: '网络',
+				// 					collapsible: false,
+				// 					collapsed: true,
+				// 					items: [
+				// 						{ text: 'TCP', link: '/knowledge-deposition/GoLang/基础知识/网络/TCP'},
+				// 						{ text: 'HTTP', link: '/knowledge-deposition/GoLang/基础知识/网络/HTTP'},
+				// 						{ text: 'RPC', link: '/knowledge-deposition/GoLang/基础知识/网络/RPC'},
+				// 					]
+				// 				}
+				// 			]
+				// 		},
+				// 		{
+				// 			text: 'Gin',
+				// 			collapsible: false,
+				// 			collapsed: true,
+				// 			items: [
+				// 				{ text: "1-hello-world", link: "/knowledge-deposition/GoLang/Gin/1-hello-world" },
+				// 				{ text: "2-响应数据", link: "/knowledge-deposition/GoLang/Gin/2-响应数据" },
 				// 			]
 				// 		}
 				// 	]

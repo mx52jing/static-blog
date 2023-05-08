@@ -162,6 +162,10 @@ func main() {
 
 ## `Slice`切片
 
+:::tip
+切片是`是引用类型`
+:::
+
 **`切片`是对`数组的一个连续片段的引用`，所以切片是一个`引用类型`。切片本身不拥有任何数据，它们只是`对现有数组的引用`，每个切片值都会`将数组作为其底层的数据结构`。`slice`的语法和数组很像，只是`没有固定长度`而已**
 
 ### 创建切片
@@ -386,5 +390,229 @@ func multidimensionalSlice(){
 
 func main() {
 	multidimensionalSlice()
+}
+```
+
+### Map
+
+:::tip
+切片是`是引用类型`
+:::
+
+- `Map`是一个拥有键值对元素的`无序集合`
+
+#### 创建Map
+
+- **使用变量声明创建`Map`**
+
+```Go
+var variable_name = map[key_type]value_type{
+  [key1]: value1,
+  [key2]: [valie2],
+  ...
+}
+variable_name := map[key_type]value_type{
+  [key1]: value1,
+  [key2]: [valie2],
+  ...
+}
+```
+
+> 示例
+
+```Go
+func createMap() {
+	var nameMap = map[int]string {
+		1: "张环",
+		2: "李朗",
+	}
+	fmt.Println(nameMap) // map[1:张环 2:李朗]
+
+	ageMap := map[string]int{
+		"张环": 22,
+		"李朗": 66,
+		"杨方": 88,
+		"仁阔": 99,
+	}
+	fmt.Println(ageMap) // map[仁阔:99 张环:22 李朗:66 杨方:88]
+}
+```
+
+- **使用`make`方法创建`Map`**
+
+```Go
+varable_name := make(map[key_type]value_type)
+```
+
+> 示例
+
+```Go
+func createMap() {
+	// varable_name := make(map[key_type]value_type)
+	likeMap := make(map[int]string)
+	fmt.Println(likeMap) // map[]
+}
+```
+
+#### `Map`操作
+
+以下是`map`的一些操作
+
+##### 添加元素
+
+  **使用`map[key] = value`为map添加元素**
+
+```Go
+func operateMap() {
+	personMap := make(map[string]string)
+	fmt.Println("初始化的personMap值为:", personMap)
+
+	// 添加元素 使用 map[key] = value
+	personMap["name"] = "张环"
+	personMap["brother"] = "李朗"
+	personMap["title"] = "八大军头"
+	// 添加元素后personMap的值为: map[brother:李朗 name:张环 title:八大军头]
+	fmt.Println("添加元素后personMap的值为:", personMap) 
+}
+```
+
+##### 删除元素
+
+  **使用`delete(map, key)`删除元素**
+
+```Go
+func operateMap() {
+	personMap := make(map[string]string)
+	fmt.Println("初始化的personMap值为:", personMap)
+
+	// 添加元素 使用 map[key] = value
+	personMap["name"] = "张环"
+	personMap["brother"] = "李朗"
+	personMap["title"] = "八大军头"
+	fmt.Println("添加元素后personMap的值为:", personMap)
+
+	// 删除元素 使用 delete(map, key)
+	delete(personMap, "name")
+	fmt.Println("删除name元素后personMap的值为:", personMap)
+}
+```
+##### 修改元素
+
+  **使用`map[key]=value`来修改元素**
+
+```Go
+func operateMap() {
+	personMap := make(map[string]string)
+	fmt.Println("初始化的personMap值为:", personMap)
+
+	// 添加元素 使用 map[key] = value
+	personMap["name"] = "张环"
+	personMap["brother"] = "李朗"
+	personMap["title"] = "八大军头"
+	fmt.Println("添加元素后personMap的值为:", personMap)
+
+	// 删除元素 使用 delete(map, key)
+	delete(personMap, "name")
+	fmt.Println("删除name元素后personMap的值为:", personMap)
+
+	// 修改元素 使用 map[key] = value
+	personMap["title"] = "元芳手下的八大军头"
+	// 更新title元素后personMap的值为: map[brother:李朗 title:元芳手下的八大军头]
+	fmt.Println("更新title元素后personMap的值为:", personMap)
+}
+```
+
+##### 获取元素
+
+  **使用`map[key]`可获取对应`key`的`value`值,如果`key不存在`,会返回其`value类型的零值`**
+
+```Go
+func operateMap() {
+	personMap := make(map[string]string)
+	fmt.Println("初始化的personMap值为:", personMap)
+
+	// 添加元素 使用 map[key] = value
+	personMap["name"] = "张环"
+	personMap["brother"] = "李朗"
+	personMap["title"] = "八大军头"
+	fmt.Println("添加元素后personMap的值为:", personMap)
+
+	// 删除元素 使用 delete(map, key)
+	delete(personMap, "name")
+	fmt.Println("删除name元素后personMap的值为:", personMap)
+
+	// 修改元素 使用 map[key] = value
+	personMap["title"] = "元芳手下的八大军头"
+	fmt.Println("更新title元素后personMap的值为:", personMap)
+
+	// 获取元素  使用 map[key]可获取对应key的value值,如果key不存在,会返回其value类型的零值
+	// 打印：元芳手下的八大军头
+	fmt.Println(personMap["title"], personMap["age"])
+}
+```
+
+##### 判断`key`是否存在
+
+  **使用`map[key]判断值是否存在，会返回2个值，第一个值是`key`所对应的`value`值，第二个是`key`是否存在，若存在返回`true`，否则返回`false`**
+
+```Go
+// 判断 key 是否存在
+brother_value, hasbrother := personMap["brother"]
+fmt.Println(brother_value, hasbrother) // 李朗 true
+
+name_value, hasName := personMap["name"]
+fmt.Println(name_value, hasName) //  false
+```
+
+##### 遍历`map`
+
+  **使用`for range`来遍历map**
+
+```Go
+for key, value := range personMap {
+  fmt.Printf("key: %s, value: %s \n", key, value)
+}
+// key: brother, value: 李朗
+// key: title, value: 元芳手下的八大军头
+```
+
+##### 获取map长度
+
+  **使用`len`函数来获取`map`长度**
+
+```Go
+fmt.Println("personMap的长度为", len(personMap)) // personMap的长度为 2
+```
+
+#### `Map`是`引用类型`
+
+  **当`map`被赋值为一个新变量的时候，它们指向`同一个内部数据结构`。因此，修改其中一个变量，就会影响到另一变量的值。**
+
+```Go
+func mapReference() {
+	personMap := map[string]string{
+		"one": "张环",
+		"two": "李朗",
+		"three": "沈韬",
+		"four": "肖豹",
+		"five": "杨方",
+		"six": "仁阔",
+	}
+	fmt.Println(personMap) // map[five:杨方 four:肖豹 one:张环 six:仁阔 three:沈韬 two:李朗]
+
+	person1Map := personMap;
+
+	person1Map["five"] = "齐虎"
+	
+	// person1Map值为: map[five:齐虎 four:肖豹 one:张环 six:仁阔 three:沈韬 two:李朗]
+	fmt.Println("person1Map值为:", person1Map) 
+	// personMap值为: map[five:齐虎 four:肖豹 one:张环 six:仁阔 three:沈韬 two:李朗]
+	fmt.Println("personMap值为:", personMap)
+
+	delete(personMap, "six")
+	// person1Map值为: map[five:齐虎 four:肖豹 one:张环 three:沈韬 two:李朗]
+	fmt.Println("person1Map值为:", person1Map)
+	// personMap值为: map[five:齐虎 four:肖豹 one:张环 three:沈韬 two:李朗]
+	fmt.Println("personMap值为:", personMap)
 }
 ```
