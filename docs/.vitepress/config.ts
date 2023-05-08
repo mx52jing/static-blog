@@ -59,7 +59,7 @@ export default {
 					collapsed: true,
 					items: [
 						{ text: 'Bash实用方法', link: '/hand-notes/Bash/practice-method'},
-						{ text: 'Bash脚本', link: '/hand-notes/Bash/Bash-scripts'},
+						{ text: 'Bash脚本', link: '/hand-notes/Bash/bash-scripts'},
 					]
 				},
 				{
