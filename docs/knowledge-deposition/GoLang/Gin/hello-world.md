@@ -2,7 +2,7 @@
 layout: doc
 ---
 
-# 1-hello-world
+# hello-world
 
 - [Gin GitHub 地址](https://github.com/gin-gonic/gin)
 - [Gin 官网](https://gin-gonic.com/)
