@@ -35,6 +35,7 @@ export default {
 							items: [
 								{ text: '数字四舍五入', link: '/hand-notes/JavaScript/实用工具方法/数字四舍五入' },
 								{ text: '根据生日计算年龄', link: '/hand-notes/JavaScript/实用工具方法/根据生日计算年龄' },
+								{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/实用工具方法/控制并发执行函数' },
 							]
 						}
 					]
@@ -76,7 +77,8 @@ export default {
 					collapsed: true,
 					items: [
 						{ text: 'Bash实用方法', link: '/hand-notes/Bash/practice-method'},
-						{ text: 'Bash脚本', link: '/hand-notes/Bash/bash-scripts'},
+						{ text: '图片压缩和格式转换', link: '/hand-notes/Bash/图片压缩和格式转换'},
+						{ text: '计算升级版本号', link: '/hand-notes/Bash/计算升级版本号'},
 					]
 				},
 				{
@@ -160,6 +162,7 @@ export default {
 										{ text: "写文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/写文件' },
 										{ text: "文件复制", link: '/knowledge-deposition/GoLang/基础知识/文件操作/文件复制' },
 										{ text: "目录操作", link: '/knowledge-deposition/GoLang/基础知识/文件操作/目录操作' },
+										{ text: "读取配置文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/读取配置文件' },
 									]
 								},
 								{
@@ -187,6 +190,15 @@ export default {
 								{ text: "上传和下载文件", link: "/knowledge-deposition/GoLang/Gin/上传和下载文件" },
 								{ text: "路由分组", link: "/knowledge-deposition/GoLang/Gin/路由分组" },
 								{ text: "中间件", link: "/knowledge-deposition/GoLang/Gin/中间件" },
+							]
+						},
+						{
+							text: 'Gorm',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: '连接数据库', link: '/knowledge-deposition/GoLang/Gorm/连接数据库' },
+								{ text: '模型定义', link: '/knowledge-deposition/GoLang/Gorm/模型定义' },
 							]
 						}
 					]
