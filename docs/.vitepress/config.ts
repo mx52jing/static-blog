@@ -89,6 +89,15 @@ export default {
 						{ text: '环境初始化', link: '/hand-notes/Mac/init'},
 						{ text: '使用小记', link: '/hand-notes/Mac/frequently-commands'}
 					]
+				},
+				{
+					text: 'Charles',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{ text: '抓包配置', link: '/hand-notes/Charles/抓包配置' },
+						{ text: '修改请求或响应', link: '/hand-notes/Charles/修改请求或响应' },
+					]
 				}
 			],
 			'/knowledge-deposition/': [
@@ -107,6 +116,15 @@ export default {
 					items: [
 						{ text: 'Docker基础知识', link: '/knowledge-deposition/Docker/Docker基础知识'},
 						{ text: 'Dockerfile', link: '/knowledge-deposition/Docker/Dockerfile'}
+					]
+				},
+				{
+					text: 'MySQL',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{ text: '基础', link: '/knowledge-deposition/MySQL/基础知识'},
+						{ text: 'SQL', link: '/knowledge-deposition/MySQL/SQL'}
 					]
 				},
 				{
@@ -163,6 +181,7 @@ export default {
 										{ text: "文件复制", link: '/knowledge-deposition/GoLang/基础知识/文件操作/文件复制' },
 										{ text: "目录操作", link: '/knowledge-deposition/GoLang/基础知识/文件操作/目录操作' },
 										{ text: "读取配置文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/读取配置文件' },
+										{ text: "并发下载远程文件", link: '/knowledge-deposition/GoLang/基础知识/文件操作/并发下载远程文件' },
 									]
 								},
 								{
@@ -190,6 +209,7 @@ export default {
 								{ text: "上传和下载文件", link: "/knowledge-deposition/GoLang/Gin/上传和下载文件" },
 								{ text: "路由分组", link: "/knowledge-deposition/GoLang/Gin/路由分组" },
 								{ text: "中间件", link: "/knowledge-deposition/GoLang/Gin/中间件" },
+								{ text: "支持跨域", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
 							]
 						},
 						{
@@ -199,6 +219,8 @@ export default {
 							items: [
 								{ text: '连接数据库', link: '/knowledge-deposition/GoLang/Gorm/连接数据库' },
 								{ text: '模型定义', link: '/knowledge-deposition/GoLang/Gorm/模型定义' },
+								{ text: 'Create', link: '/knowledge-deposition/GoLang/Gorm/Create' },
+								{ text: 'Query', link: '/knowledge-deposition/GoLang/Gorm/Query' },
 							]
 						}
 					]

@@ -7,8 +7,12 @@ layout: doc
 ## 查看当前时间
 
 ```Go
-func time.Now() time.Time
+func Now() Time
 ```
+
+:::tip
+时间戳精确到`秒`
+:::
 
 > 代码示例
 
@@ -21,6 +25,8 @@ fmt.Println("当前时间戳为", curTimestamp)
 ```
 
 ## 获取两个时间的间隔
+
+### time.Time.Sub
 
 ```Go
 func (time.Time).Sub(u time.Time) time.Duration
@@ -44,7 +50,28 @@ fmt.Println("t2和t之前相差的时间按毫秒来看为:", timeInterval.Milli
 fmt.Println("t2和t之前相差的时间按纳秒来看为:", timeInterval.Microseconds())
 ```
 
-## 计算两个时间相加
+### time.Since
+
+```Go
+func Since(t Time) Duration
+```
+
+:::tip
+`time.Since(t)`是`time.Now().Sub(t)`的快捷方式
+:::
+
+```Go
+// 获取当前时间
+t := time.Now()
+// 睡眠两秒
+time.Sleep(2 * time.Second)
+d := time.Since(t)
+fmt.Println(d) // 2.001039875s
+```
+
+## 两个时间相加
+
+### time.Time.Add
 
 ```Go
 func (time.Time).Add(d time.Duration) time.Time
@@ -71,15 +98,23 @@ const (
 )
 ```
 
-- 年Year: `2006`表示`4位年份`、`06`表示`2位年份`，
-- 月Month: 如`"Jan"`、 `"January"`， `01`表示`月份` "1"
-- 周Day of the week: "Mon" "Monday"
-- 月Day of the month: "2" "_2" "02"
-- 天Day of the year: "__2" "002"
-- 小时Hour: "15" "3" "03" (PM or AM)，`15`表示`24小时制`，`3`表示`12小时制`，`03`表示`12小时制（1位数字时需要补0）`
-- 分钟Minute: "4" "04"
-- 秒Second: "5" "05"
-- AM/PM mark: "PM"
+|Unit|Layout|Result|
+|:-:|:-:|:-:|
+|Year|06|21, 81, 01|
+|Year|2006|2021, 1981, 0001|
+|Month|1|1, 2, 12|
+|Month|01|01, 02, 12|
+|Day|	2|	1, 2, 11, 31|	
+|Day|	02|	01, 02, 11, 31|
+|Part of day|	PM|	AM, PM|	
+|Part of day|	pm|	am, pm|
+|Hour 24h|15|	00, 01, 12, 23|
+|Hour 12h|3|	1, 2, 12|	
+|Hour 12h|03|	01, 02, 12|
+|Minute|4|0, 4 ,10, 35|	
+|Minute|04|00, 04 ,10, 35|
+|Second|5|0, 5, 25|	
+|Second|05|00, 05, 25|
 
 ## Timer和Ticker
 
