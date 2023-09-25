@@ -144,6 +144,14 @@ export default {
 					]
 				},
 				{
+					text: 'Linux',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{ text: '文件压缩', link: '/knowledge-deposition/Linux/文件压缩'}
+					]
+				},
+				{
 					text: 'GoLang',
 					collapsible: false,
 					collapsed: true,
@@ -170,6 +178,7 @@ export default {
 								{ text: 'Select', link: '/knowledge-deposition/GoLang/基础知识/Select'},
 								{ text: 'time包', link: '/knowledge-deposition/GoLang/基础知识/time包'},
 								{ text: 'json序列化', link: '/knowledge-deposition/GoLang/基础知识/json序列化'},
+								{ text: 'Context', link: '/knowledge-deposition/GoLang/基础知识/Context'},
 								{
 									text: '文件操作',
 									collapsible: false,
@@ -221,8 +230,21 @@ export default {
 								{ text: '模型定义', link: '/knowledge-deposition/GoLang/Gorm/模型定义' },
 								{ text: 'Create', link: '/knowledge-deposition/GoLang/Gorm/Create' },
 								{ text: 'Query', link: '/knowledge-deposition/GoLang/Gorm/Query' },
+								{ text: 'AdvancedQuery', link: '/knowledge-deposition/GoLang/Gorm/AdvancedQuery' },
+								{ text: 'Update', link: '/knowledge-deposition/GoLang/Gorm/Update' },
+								{ text: 'Delete', link: '/knowledge-deposition/GoLang/Gorm/Delete' },
 							]
-						}
+						},
+						{
+							text: 'Logrus',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: '基础用法', link: '/knowledge-deposition/GoLang/Logrus/基础用法' },
+								{ text: 'Hook', link: '/knowledge-deposition/GoLang/Logrus/Hook' },
+								{ text: '日志分割', link: '/knowledge-deposition/GoLang/Logrus/日志分割' },
+							]
+						},
 					]
 				}
 			],
