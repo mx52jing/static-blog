@@ -102,11 +102,27 @@ export default {
 			],
 			'/knowledge-deposition/': [
 				{
-					text: 'Babel',
+					text: '前端工程化',
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: 'Babel基础', link: '/knowledge-deposition/Babel/Babel基础'}
+						{
+							text: 'Babel',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: 'Babel基础', link: '/knowledge-deposition/前端工程化/Babel/Babel基础'}
+							]
+						},
+						{
+
+							text: 'Vite',
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: '初体验', link: '/knowledge-deposition/前端工程化/Vite/初体验' },
+							]
+						}
 					]
 				},
 				{
