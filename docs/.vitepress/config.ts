@@ -111,7 +111,7 @@ export default {
 							collapsible: false,
 							collapsed: true,
 							items: [
-								{ text: 'Babel基础', link: '/knowledge-deposition/前端工程化/Babel/Babel基础'}
+								{ text: 'Babel基础', link: '/knowledge-deposition/前端工程化/Babel/Babel基础'},
 							]
 						},
 						{
@@ -121,6 +121,7 @@ export default {
 							collapsed: true,
 							items: [
 								{ text: '初体验', link: '/knowledge-deposition/前端工程化/Vite/初体验' },
+								{ text: '区分不同环境', link: '/knowledge-deposition/前端工程化/Vite/区分不同环境'}
 							]
 						}
 					]
