@@ -121,7 +121,8 @@ export default {
 							collapsed: true,
 							items: [
 								{ text: '初体验', link: '/knowledge-deposition/前端工程化/Vite/初体验' },
-								{ text: '区分不同环境', link: '/knowledge-deposition/前端工程化/Vite/区分不同环境'}
+								{ text: '区分不同环境', link: '/knowledge-deposition/前端工程化/Vite/区分不同环境'},
+								{ text: '处理样式', link: '/knowledge-deposition/前端工程化/Vite/处理样式'},
 							]
 						}
 					]
