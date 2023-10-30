@@ -125,6 +125,7 @@ export default {
 								{ text: '处理样式', link: '/knowledge-deposition/前端工程化/Vite/处理样式'},
 								{ text: '处理静态资源', link: '/knowledge-deposition/前端工程化/Vite/处理静态资源'},
 								{ text: '依赖预构建', link: '/knowledge-deposition/前端工程化/Vite/依赖预构建'},
+								{ text: 'esbuild相关', link: '/knowledge-deposition/前端工程化/Vite/esbuild相关'},
 							]
 						}
 					]
