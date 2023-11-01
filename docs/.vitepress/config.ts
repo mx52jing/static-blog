@@ -60,15 +60,18 @@ export default {
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{
-							text: 'CSS效果',
-							collapsible: false,
-							collapsed: true,
-							items: [
-								{ text: 'CSS实现文字渐变', 'link': '/hand-notes/CSS/CSS效果/CSS实现文字渐变'},
-								{ text: 'CSS实现突出不同颜色的圆角', 'link': '/hand-notes/CSS/CSS效果/CSS实现突出不同颜色的圆角'},
-							]
-						}
+						{ text: 'CSS实现文字渐变', 'link': '/hand-notes/CSS/CSS实现文字渐变'},
+						{ text: 'CSS实现突出不同颜色的圆角', 'link': '/hand-notes/CSS/CSS实现突出不同颜色的圆角'},
+						{ text: 'CSS计数器-counter', 'link': '/hand-notes/CSS/CSS计数器-counter'},
+						{ text: 'CSS模拟数字loading', 'link': '/hand-notes/CSS/CSS模拟数字loading'},
+					]
+				},
+				{
+					text: 'Sass',
+					collapsible: false,
+					collapsed: true,
+					items: [
+						{ text: '通过mixin简化响应式代码', 'link': '/hand-notes/Sass/通过mixin简化响应式代码'},
 					]
 				},
 				{

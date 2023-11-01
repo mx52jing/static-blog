@@ -814,3 +814,7 @@ export default autoGenerateHtmlPlugin
 ```javascript
 plugins: [envPlugin, autoGenerateHtmlPlugin()]
 ```
+
+## 其他
+
+- **相关代码可查看**[usage-esbuild](https://github.com/mx52jing/vite-related/tree/main/usage-esbuild)
