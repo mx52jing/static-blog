@@ -36,6 +36,7 @@ CSS计数器一般和`伪元素`和`content`属性一起使用，有几个关键
 }
 ```
 
+**预览效果点击[这里](https://mx52jing.github.io/Notes/css-related/counter/counter-reset.html)**
 
 ## counter-increment
 
@@ -134,6 +135,7 @@ CSS计数器一般和`伪元素`和`content`属性一起使用，有几个关键
 
 - `counter-increment`支持多个计数器同时设置，多个计数器直接使用`空格`分割
 
+
 ## counter()/counters()
 
 `counter`和`counters`都是一个函数
@@ -221,3 +223,15 @@ counters(name, string, style)
 :::tip
 - 一个元素如果设置了`counter-increment`, 但是设置了`display: none`，则此计数值是不会增加的。`visibility: hidden`以及其他样式不会有此现象。
 :::
+
+## 其他
+
+### 效果预览
+
+- [counter-reset](https://mx52jing.github.io/Notes/css-related/counter/counter-reset.html)
+
+- [counter-increment](https://mx52jing.github.io/Notes/css-related/counter/counter-increment.html)
+
+### 相关代码
+
+- 点击[这里查看](https://github.com/mx52jing/Notes/tree/master/css-related/counter)

@@ -218,3 +218,9 @@ npm ERR! need auth You need to authorize this machine using `npm adduser`
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /Users/xxx/.npm/_logs/2023-03-10T15_19_28_286Z-debug-0.log
 ```
+
+## 获取当前机器IP
+
+```shell
+ifconfig | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk '{print $2}'
+```

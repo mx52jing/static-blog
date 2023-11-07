@@ -161,6 +161,17 @@ loading效果先快后慢，速度可以到[贝塞尔曲线工具网站](https:/
 
 ## 其他
 
-兼容性如下：
+### 兼容性
 
 ![](/image/css/houdini-1.png)
+
+### 效果预览
+
+- [Houdini-@property](https://mx52jing.github.io/Notes/css-related/houdini-@property/base/index.html)
+
+- [文字loading](https://mx52jing.github.io/Notes/css-related/houdini-@property/loading/index.html)
+
+### 相关代码
+
+
+- 点击[这里查看](https://github.com/mx52jing/Notes/blob/master/css-related/houdini-%40property/loading/index.html)

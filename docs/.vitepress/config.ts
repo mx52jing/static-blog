@@ -8,6 +8,7 @@ export default {
 	smoothScroll: true, // 设置页面滚动行为
 	displayAllHeaders: true, // 显示所有页面的标题链接
 	cleanUrls: true, // 简化访问URL，地址栏内的路径不用出现.html/.md后缀了
+	appearance: true, // 开启主题切换
 	themeConfig: {
 		// 网站标题
 		siteTitle: "mx52jing",
@@ -16,8 +17,8 @@ export default {
 		// 导航栏配置
 		nav: [
 			{ text: '首页', link: '/' },
-			{ text: '随手一记', link: '/hand-notes/' },
-			{ text: '知识沉淀', link: '/knowledge-deposition/' },
+			{ text: '随手一记', link: '/hand-notes/JavaScript/数字四舍五入' },
+			{ text: '知识沉淀', link: '/knowledge-deposition/前端工程化/Babel/Babel基础' },
 			{ text: '收藏夹', link: '/favorites/' },
 		],
 		// 左侧边栏配置
@@ -26,29 +27,22 @@ export default {
 				{
 					text: 'JavaScript',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
-						{
-							text: '实用工具方法',
-							collapsible: false,
-							collapsed: true,
-							items: [
-								{ text: '数字四舍五入', link: '/hand-notes/JavaScript/实用工具方法/数字四舍五入' },
-								{ text: '根据生日计算年龄', link: '/hand-notes/JavaScript/实用工具方法/根据生日计算年龄' },
-								{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/实用工具方法/控制并发执行函数' },
-							]
-						}
+						{ text: '数字四舍五入', link: '/hand-notes/JavaScript/数字四舍五入' },
+						{ text: '根据生日计算年龄', link: '/hand-notes/JavaScript/根据生日计算年龄' },
+						{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/控制并发执行函数' },
 					]
 				},
 				{
 					text: 'Chart',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							text: 'AntVF2',
 							collapsible: false,
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ text: '使用小记', link: '/hand-notes/Chart/AntVF2/使用小记'}
 							]
@@ -57,8 +51,8 @@ export default {
 				},
 				{
 					text: 'CSS',
-					collapsible: false,
-					collapsed: true,
+					collapsible: true,
+					collapsed: false,
 					items: [
 						{ text: 'CSS实现文字渐变', 'link': '/hand-notes/CSS/CSS实现文字渐变'},
 						{ text: 'CSS实现突出不同颜色的圆角', 'link': '/hand-notes/CSS/CSS实现突出不同颜色的圆角'},
@@ -69,25 +63,27 @@ export default {
 				{
 					text: 'Sass',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
+						{ text: 'sass小技巧', 'link': '/hand-notes/Sass/sass小技巧'},
 						{ text: '通过mixin简化响应式代码', 'link': '/hand-notes/Sass/通过mixin简化响应式代码'},
+						{ text: 'sass实现星空效果', 'link': '/hand-notes/Sass/sass实现星空效果'},
 					]
 				},
 				{
-					text: 'Bash',
+					text: 'Linux',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
-						{ text: 'Bash实用方法', link: '/hand-notes/Bash/practice-method'},
-						{ text: '图片压缩和格式转换', link: '/hand-notes/Bash/图片压缩和格式转换'},
-						{ text: '计算升级版本号', link: '/hand-notes/Bash/计算升级版本号'},
+						{ text: 'Bash实用方法', link: '/hand-notes/Linux/practice-method'},
+						{ text: '图片压缩和格式转换', link: '/hand-notes/Linux/图片压缩和格式转换'},
+						{ text: '计算升级版本号', link: '/hand-notes/Linux/计算升级版本号'},
 					]
 				},
 				{
 					text: 'Mac',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ text: '环境初始化', link: '/hand-notes/Mac/init'},
 						{ text: '使用小记', link: '/hand-notes/Mac/frequently-commands'}
@@ -96,7 +92,7 @@ export default {
 				{
 					text: 'Charles',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ text: '抓包配置', link: '/hand-notes/Charles/抓包配置' },
 						{ text: '修改请求或响应', link: '/hand-notes/Charles/修改请求或响应' },
@@ -107,12 +103,12 @@ export default {
 				{
 					text: '前端工程化',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							text: 'Babel',
 							collapsible: false,
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ text: 'Babel基础', link: '/knowledge-deposition/前端工程化/Babel/Babel基础'},
 							]
@@ -121,7 +117,7 @@ export default {
 
 							text: 'Vite',
 							collapsible: false,
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ text: '初体验', link: '/knowledge-deposition/前端工程化/Vite/初体验' },
 								{ text: '区分不同环境', link: '/knowledge-deposition/前端工程化/Vite/区分不同环境'},
@@ -129,6 +125,8 @@ export default {
 								{ text: '处理静态资源', link: '/knowledge-deposition/前端工程化/Vite/处理静态资源'},
 								{ text: '依赖预构建', link: '/knowledge-deposition/前端工程化/Vite/依赖预构建'},
 								{ text: 'esbuild相关', link: '/knowledge-deposition/前端工程化/Vite/esbuild相关'},
+								{ text: 'Rollup的插件机制', link: '/knowledge-deposition/前端工程化/Vite/Rollup的插件机制'},
+								{ text: 'Vite插件', link: '/knowledge-deposition/前端工程化/Vite/Vite插件'},
 							]
 						}
 					]
@@ -136,7 +134,7 @@ export default {
 				{
 					text: 'Docker',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ text: 'Docker基础知识', link: '/knowledge-deposition/Docker/Docker基础知识'},
 						{ text: 'Dockerfile', link: '/knowledge-deposition/Docker/Dockerfile'}
@@ -145,7 +143,7 @@ export default {
 				{
 					text: 'MySQL',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ text: '基础', link: '/knowledge-deposition/MySQL/基础知识'},
 						{ text: 'SQL', link: '/knowledge-deposition/MySQL/SQL'}
@@ -154,31 +152,24 @@ export default {
 				{
 					text: 'SSH',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ text: 'SSH基础', link: '/knowledge-deposition/SSH/ssh-base'}
 					]
 				},
 				{
-					text: 'Bash',
-					collapsible: false,
-					collapsed: true,
-					items: [
-						{ text: 'Bash 基础知识', link: '/knowledge-deposition/Bash/基础知识'}
-					]
-				},
-				{
 					text: 'Linux',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
-						{ text: '文件压缩', link: '/knowledge-deposition/Linux/文件压缩'}
+						{ text: 'Bash 基础知识', link: '/knowledge-deposition/Linux/Bash基础知识'},
+						{ text: '文件压缩', link: '/knowledge-deposition/Linux/文件压缩'},
 					]
 				},
 				{
 					text: 'GoLang',
 					collapsible: false,
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							text: '基础知识',

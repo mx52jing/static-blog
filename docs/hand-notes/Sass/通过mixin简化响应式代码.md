@@ -4,6 +4,8 @@ layout: doc
 
 # 通过mixin简化响应式代码
 
+## 代码展示
+
 有的响应式代码可能需要写一些适配代码，例如
 
 ```css
@@ -44,9 +46,12 @@ $layouts: (
 
 - 定义`mixin`函数，该函数接收`$breakpoint`参数，默认为`md`，该参数的值就是定义的`map`的`key`，然后取出当前配置的`min-width`和`max-width`的值，然后判断该值的类型生成代码，我们还想在`mixin`函数中写该尺寸对应的样式，可以使用`@content`，将样式传到`@media screen`中
 
-> 完整代码如下，当然`mixin`可以单独提出去一个作为单独文件
+> `mixin`的代码如下，当然mixin可以单独提出去一个作为单独文件
 
 ```scss
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
 // 定义一个尺寸对应的宽度map
 $layouts: (
     'xs': (null, 768px),
@@ -55,20 +60,21 @@ $layouts: (
     'lg': (1200px, 1920px),
     'xl': (1920px, null),
 );
+
 @mixin respond-to($breakpoint: 'md') {
-  // 根据传入的$breakpoint 获取宽度设置，获取到的是一个list
-  $sizeList: map-get($layouts, $breakpoint);
-  // 取出 list 的第一项 和 第二项
-  $min: nth($sizeList, 1);
-  $max: nth($sizeList, 2);
+  // 从一个键值对取值 $sizeList 是一个数组
+  $sizeList: map.get($layouts, $breakpoint);
+  // 取出 数组 的第一项 和 第二项
+  $min: list.nth($sizeList, 1);
+  $max: list.nth($sizeList, 2);
   // 最小值为null 表示是 xs
-  @if type-of($min) == 'null' {
+  @if meta.type-of($min) == 'null' {
     @media screen and (max-width: $max){
       @content;
     }
   }
     // 最大值是 null 表示是最大尺寸 xl
-  @else if type-of($max) == 'null' {
+  @else if meta.type-of($max) == 'null' {
     @media screen and (min-width: $min){
       @content;
     }
@@ -78,13 +84,51 @@ $layouts: (
       @content;
     }
   }
+}
 ```
 
 > 可以达到下面的效果
 
-`home.scss`
+原始的`home.scss`文件：
 
 ```scss
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+// 定义一个尺寸对应的宽度map
+$layouts: (
+    'xs': (null, 768px),
+    'sm': (768px, 992px),
+    'md': (992px, 1200px),
+    'lg': (1200px, 1920px),
+    'xl': (1920px, null),
+);
+
+@mixin respond-to($breakpoint: 'md') {
+  // 从一个键值对取值 $sizeList 是一个数组
+  $sizeList: map.get($layouts, $breakpoint);
+  // 取出 数组 的第一项 和 第二项
+  $min: list.nth($sizeList, 1);
+  $max: list.nth($sizeList, 2);
+  // 最小值为null 表示是 xs
+  @if meta.type-of($min) == 'null' {
+    @media screen and (max-width: $max){
+      @content;
+    }
+  } 
+  // 最大值是 null 表示是最大尺寸 xl
+  @else if meta.type-of($max) == 'null' {
+    @media screen and (min-width: $min){
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $min) and (max-width: $max){
+      @content;
+    }
+  }
+}
+
 .home {
   width: 200px;
   height: 300px;
@@ -110,6 +154,7 @@ $layouts: (
     font-size: 26px;
   };
 }
+
 ```
 
 编译后的`home.css`
@@ -154,4 +199,13 @@ $layouts: (
 
 这样想修改对应尺寸或者样式，就很方便了
 
-**相关代码可点击[mixin-optimize-style](https://github.com/mx52jing/Notes/blob/master/sass-related/mixin-optimize-style/index.scss)查看**
+
+## 其他
+
+### 查看代码
+
+- **相关代码可点击[mixin-optimize-style](https://github.com/mx52jing/Notes/blob/master/sass-related/mixin-optimize-style/index.scss)查看**
+
+### 效果预览
+
+- [mixin-optimize-style](https://github.com/mx52jing/Notes/sass-related/mixin-optimize-style/index.html)

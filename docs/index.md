@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 进入正题吧
-      link: /hand-notes/
+      link: /hand-notes/JavaScript/数字四舍五入
     - theme: alt
       text: View on GitHub
       link: https://github.com/mx52jing
