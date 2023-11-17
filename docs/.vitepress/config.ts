@@ -19,7 +19,7 @@ export default {
 			{ text: '首页', link: '/' },
 			{ text: '随手一记', link: '/hand-notes/JavaScript/数字四舍五入' },
 			{ text: '知识沉淀', link: '/knowledge-deposition/前端工程化/Babel/Babel基础' },
-			{ text: '收藏夹', link: '/favorites/' },
+			{ text: '收藏夹', link: '/favorites/CSS/' },
 		],
 		// 左侧边栏配置
 		sidebar: {
@@ -58,6 +58,7 @@ export default {
 						{ text: 'CSS实现突出不同颜色的圆角', 'link': '/hand-notes/CSS/CSS实现突出不同颜色的圆角'},
 						{ text: 'CSS计数器-counter', 'link': '/hand-notes/CSS/CSS计数器-counter'},
 						{ text: 'CSS模拟数字loading', 'link': '/hand-notes/CSS/CSS模拟数字loading'},
+						{ text: '实现高度过渡', 'link': '/hand-notes/CSS/实现高度过渡'},
 					]
 				},
 				{
@@ -126,7 +127,7 @@ export default {
 								{ text: '依赖预构建', link: '/knowledge-deposition/前端工程化/Vite/依赖预构建'},
 								{ text: 'esbuild相关', link: '/knowledge-deposition/前端工程化/Vite/esbuild相关'},
 								{ text: 'Rollup的插件机制', link: '/knowledge-deposition/前端工程化/Vite/Rollup的插件机制'},
-								{ text: 'Vite插件', link: '/knowledge-deposition/前端工程化/Vite/Vite插件'},
+								{ text: 'Vite插件机制', link: '/knowledge-deposition/前端工程化/Vite/Vite插件机制'},
 							]
 						}
 					]
@@ -234,6 +235,7 @@ export default {
 								{ text: "路由分组", link: "/knowledge-deposition/GoLang/Gin/路由分组" },
 								{ text: "中间件", link: "/knowledge-deposition/GoLang/Gin/中间件" },
 								{ text: "支持跨域", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
+								{ text: "集成Swagger", link: "/knowledge-deposition/GoLang/Gin/集成Swagger" },
 							]
 						},
 						{
@@ -260,6 +262,14 @@ export default {
 								{ text: '日志分割', link: '/knowledge-deposition/GoLang/Logrus/日志分割' },
 							]
 						},
+						{
+							text: "爬虫",
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: 'HTTP请求方法', link: '/knowledge-deposition/GoLang/爬虫/HTTP请求方法' },
+							]
+						}
 					]
 				}
 			],

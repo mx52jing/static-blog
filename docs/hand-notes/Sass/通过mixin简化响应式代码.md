@@ -208,4 +208,4 @@ $layouts: (
 
 ### 效果预览
 
-- [mixin-optimize-style](https://github.com/mx52jing/Notes/sass-related/mixin-optimize-style/index.html)
+- [mixin-optimize-style](https://mx52jing.github.io/Notes/sass-related/mixin-optimize-style/index.html)
