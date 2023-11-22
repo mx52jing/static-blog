@@ -59,6 +59,7 @@ export default {
 						{ text: 'CSS计数器-counter', 'link': '/hand-notes/CSS/CSS计数器-counter'},
 						{ text: 'CSS模拟数字loading', 'link': '/hand-notes/CSS/CSS模拟数字loading'},
 						{ text: '实现高度过渡', 'link': '/hand-notes/CSS/实现高度过渡'},
+						{ text: 'CSS实现类似微信头像效果', 'link': '/hand-notes/CSS/CSS实现类似微信头像效果'},
 					]
 				},
 				{
@@ -147,7 +148,11 @@ export default {
 					collapsed: false,
 					items: [
 						{ text: '基础', link: '/knowledge-deposition/MySQL/基础知识'},
-						{ text: 'SQL', link: '/knowledge-deposition/MySQL/SQL'}
+						{ text: 'SQL', link: '/knowledge-deposition/MySQL/SQL'},
+						{ text: '数据操作和查询', link: '/knowledge-deposition/MySQL/数据操作和查询'},
+						{ text: '函数', link: '/knowledge-deposition/MySQL/函数'},
+						{ text: '分组和子查询', link: '/knowledge-deposition/MySQL/分组和子查询'},
+						{ text: '表连接', link: '/knowledge-deposition/MySQL/表连接'},
 					]
 				},
 				{
@@ -235,7 +240,7 @@ export default {
 								{ text: "路由分组", link: "/knowledge-deposition/GoLang/Gin/路由分组" },
 								{ text: "中间件", link: "/knowledge-deposition/GoLang/Gin/中间件" },
 								{ text: "支持跨域", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
-								{ text: "集成Swagger", link: "/knowledge-deposition/GoLang/Gin/集成Swagger" },
+								{ text: "集成Swagger", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
 							]
 						},
 						{
