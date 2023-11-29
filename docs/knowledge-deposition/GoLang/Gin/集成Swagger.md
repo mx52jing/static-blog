@@ -65,6 +65,8 @@ swag fmt xxx/swagger/
 
 ## gin-swagger注解
 
+- 更多详细注解可点击[swaggo.github.io/swaggo.io](https://swaggo.github.io/swaggo.io/declarative_comments_format/)、[github.com/swaggo/swag](https://github.com/swaggo/swag#declarative-comments-format)查看
+
 :::warning
 - `注解`和`函数`之间不能有空行，否则swagger将不会展示接口文档
 
@@ -81,17 +83,37 @@ func xx() {}
 func xx() {} 
 ```
 - 如果本地接口文档有更新，只需在项目根目录下再次执行`swag init`，然后重启服务即可
-:::
+  :::
 
-### @Summary
+### 全局注解
+------
+#### @Title
+
+当前API文档的标题
+
+#### @Version
+
+当前API文档版本
+
+#### @Description
+
+当前API文档详细描述
+
+#### BasePath
+
+当前API的公共路径前缀
+
+### API 注解
+------
+#### @Summary
 
 表示某API接口的摘要
 
-### @Produce
+#### @Produce
 
 表示API可以产生的`MIME类型`，可以理解为接口响应类型，可以是`json`、`xml`、`html`等类型
 
-### @Param
+#### @Param
 
 表示参数格式，从左到右依次是`参数名`、`参数类型`、`数据类型`、`是否必填`、`注释`
 
@@ -103,15 +125,15 @@ func xx() {}
 - `query`：GET请求参数
 - `path`：RESTFUL风格的参数，例如`/user/:id/`
 
-### @Success
+#### @Success
 
 响应成功状态，从左到右依次是`状态码`、`参数类型`、`数据类型`、`注释`
 
-### @Failure
+#### @Failure
 
 响应失败状态，从左到右依次是`状态码`、`参数类型`、`数据类型`、`注释`
 
-### @Router
+#### @Router
 
 路由，从左到右依次是`路由地址`、`HTTP请求方法`
 

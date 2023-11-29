@@ -223,7 +223,8 @@ export default {
 										{ text: 'HTTP', link: '/knowledge-deposition/GoLang/基础知识/网络/HTTP'},
 										{ text: 'RPC', link: '/knowledge-deposition/GoLang/基础知识/网络/RPC'},
 									]
-								}
+								},
+								{ text: 'Test', link: '/knowledge-deposition/GoLang/基础知识/Test'},
 							]
 						},
 						{
@@ -240,7 +241,7 @@ export default {
 								{ text: "路由分组", link: "/knowledge-deposition/GoLang/Gin/路由分组" },
 								{ text: "中间件", link: "/knowledge-deposition/GoLang/Gin/中间件" },
 								{ text: "支持跨域", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
-								{ text: "集成Swagger", link: "/knowledge-deposition/GoLang/Gin/支持跨域" },
+								{ text: "集成Swagger", link: "/knowledge-deposition/GoLang/Gin/集成Swagger" },
 							]
 						},
 						{
