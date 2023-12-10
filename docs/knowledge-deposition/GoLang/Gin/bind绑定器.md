@@ -345,7 +345,7 @@ func parseErrorMessage(err error, originalStruct any) string {
 	var result string
 	// 利用反射获取结构体的值
 	structData := reflect.TypeOf(originalStruct).Elem()
-	for _, errItem := range errs {
+	for index, errItem := range errs {
 		// 获取错误字段在结构体中的key 比如Name/Score
 		errFiledName := errItem.Field()
 		// 获取当前错误具体的tag名称 比如是required 还是 gtfield
@@ -360,7 +360,7 @@ func parseErrorMessage(err error, originalStruct any) string {
 				errMsg = field.Tag.Get("msg")
 			}
 			var separator string
-			if len(errMsg) > 0 {
+			if len(errMsg) > 0 && index != 0 {
 				separator = "，"
 			}
 			result += fmt.Sprintf("%s%s", separator, errMsg)

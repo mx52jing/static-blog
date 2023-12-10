@@ -275,6 +275,15 @@ export default {
 							items: [
 								{ text: 'HTTP请求方法', link: '/knowledge-deposition/GoLang/爬虫/HTTP请求方法' },
 							]
+						},
+						{
+							text: "加密",
+							collapsible: false,
+							collapsed: true,
+							items: [
+								{ text: 'AES加密', link: '/knowledge-deposition/GoLang/加密/AES加密' },
+								{ text: 'RSA加密', link: '/knowledge-deposition/GoLang/加密/RSA加密' },
+							]
 						}
 					]
 				}
