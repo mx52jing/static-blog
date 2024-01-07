@@ -295,12 +295,19 @@ func parseErrorMessage(err error, originalStruct any) string {
 			if len(errMsg) == 0 {
 				errMsg = field.Tag.Get("msg")
 			}
-			var separator string
-			if len(errMsg) > 0 {
-				separator = "，"
-			}
-			result += fmt.Sprintf("%s%s", separator, errMsg)
+			result = appendErrorMsg(result, errMsg)
 		}
+	}
+	return result
+}
+
+// 拼接error msg 字符串
+func appendErrorMsg(result string, errMsg string) string {
+	if len(result) == 0 {
+		return errMsg
+	}
+	if len(errMsg) > 0 {
+		return result + "," + errMsg
 	}
 	return result
 }
@@ -359,12 +366,19 @@ func parseErrorMessage(err error, originalStruct any) string {
 			if len(errMsg) == 0 {
 				errMsg = field.Tag.Get("msg")
 			}
-			var separator string
-			if len(errMsg) > 0 && index != 0 {
-				separator = "，"
-			}
-			result += fmt.Sprintf("%s%s", separator, errMsg)
+			result = appendErrorMsg(result, errMsg)
 		}
+	}
+	return result
+}
+
+// 拼接error msg 字符串
+func appendErrorMsg(result string, errMsg string) string {
+	if len(result) == 0 {
+		return errMsg
+	}
+	if len(errMsg) > 0 {
+		return result + "," + errMsg
 	}
 	return result
 }
@@ -382,6 +396,18 @@ func main() {
 	router.Run(":9100")
 }
 ```
+
+:::tip
+- 如果某个字段不是必填，但是如果用户填了就要去校验，可以在`binding`中加上`omitempty`来实现
+> 例如，`email/age`字段不是必填的，当提交时没有填写`email/age`字段时，不会触发校验，当传了`email/age`字段，才会进行校验
+
+```Go
+type User struct {
+	Email     string    `gorm:"type:varchar(60);not null;comment:邮箱" json:"email" binding:"omitempty,email" email_msg:"邮箱格式错误"`
+	Age       uint8     `gorm:"not null;comment:年龄" json:"age" binding:"omitempty,gte=18,lte=70" gte_msg:"年龄必须在18-70之间" lte_msg:"年龄必须在18-70之间"`
+}
+```
+:::
 
 
 

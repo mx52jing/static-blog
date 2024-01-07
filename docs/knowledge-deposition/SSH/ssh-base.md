@@ -42,8 +42,8 @@ SSH -l username -p port hostname
 ### 修改密钥权限，以防他人读取
 
 ```shell
-chmod 600 ~/.SSH/id_rsa
-chmod 600 ~/.SSH/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa.pub
 ```
 ### 通过自定义配置文件快速登录
 
@@ -76,18 +76,18 @@ SSH-keygen -t ras -C "youremail@example.com"
 
 ```shell
 # 复制公钥
-pbcopy < ~/.SSH/id_rsa.pub
+pbcopy < ~/.ssh/id_rsa.pub
 # 登录服务器，并粘贴公钥
 SSH user@hostname
-vim ~/.SSH/authorized_keys
-# 将复制的公钥粘贴到(~/.SSH/authorized_keys)文件内，保存并退出
+vim ~/.ssh/authorized_keys
+# 将复制的公钥粘贴到(~/.ssh/authorized_keys)文件内，保存并退出
 ```
 
 - 退出服务器后，重新登录服务器
 
 ```shell
 SSH user@hostname
-# 或者如果配置了~/.SSH/config文件的话，可以直接用下面这种方式
+# 或者如果配置了~/.ssh/config文件的话，可以直接用下面这种方式
 SSH myServer
 ```
 
@@ -97,11 +97,11 @@ SSH myServer
 
 ```shell
 PubkeyAuthentication yes
-AuthorizedKeysFile .SSH/authorized_keys
+AuthorizedKeysFile .ssh/authorized_keys
 ```
 - 同时修改`/etc/ssh/authorized_keys`文件权限，因为如果权限不对，`SSH`服务器可能会拒绝读取该文件
 ```shell
-chmod 644 ~/.SSH/authorized_keys
+chmod 644 ~/.ssh/authorized_keys
 ```
 - 重新启动`sshd`
 ```shell
@@ -166,7 +166,7 @@ SSH-keygen -t rsa -C "youremail@example.com"
 ```
 ### `-f`指定生成的密钥文件路径
 ```shell
-SSH-keygen -t rsa -f ~/.SSH/mykey -C "xx@aa.com"
+SSH-keygen -t rsa -f ~/.ssh/mykey -C "xx@aa.com"
 ```
 上面命令会在`~/.ssh`文件夹下面生成`mykey`和`mykey.pub`文件
 
@@ -191,8 +191,8 @@ SSH-keygen -F 66.88.66.8
 SSH-keygen -R 66.88.66.8
 
 # # Host 66.88.66.8 found: line 13
-# /Users/xxx/.SSH/known_hosts updated.
-# Original contents retained as /Users/xxx/.SSH/known_hosts.old
+# /Users/xxx/.ssh/known_hosts updated.
+# Original contents retained as /Users/xxx/.ssh/known_hosts.old
 ```
 
 ### -t 指定生成密钥的算法
@@ -206,19 +206,19 @@ SSH-keygen -t ed25519 -C "your_email@example.com"
 
 - 使用`ssh-keygen`命令生成两个不同的密钥
 ```shell
-SSH-keygen -t rsa -f ~/.SSH/id_rsa_exampl1 -C "exampl1.com"
-SSH-keygen -t rsa -f ~/.SSH/id_rsa_exampl2 -C "exampl2.com"
+SSH-keygen -t rsa -f ~/.ssh/id_rsa_exampl1 -C "exampl1.com"
+SSH-keygen -t rsa -f ~/.ssh/id_rsa_exampl2 -C "exampl2.com"
 ```
 - 配置`~/.ssh/config`文件
 ```shell
 Host  github.example1.com
 			HostName github.com
 			PreferredAuthentications publickey
-			IdentityFile ~/.SSH/id_rsa_example1
+			IdentityFile ~/.ssh/id_rsa_example1
 Host  github.example2.com
 			HostName github.com
 			PreferredAuthentications publickey
-			IdentityFile ~/.SSH/id_rsa_example2
+			IdentityFile ~/.ssh/id_rsa_example2
 ```
 如果要使用`example1.com`邮箱生成的`ssh-key`添加远程链接，修改`github.com`为该邮箱的`ssh-key`对应的`Host`，如下：
 
