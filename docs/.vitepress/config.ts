@@ -294,6 +294,9 @@ export default {
 				{ text: 'Mobile Side', link: '/favorites/Mobile/' },
 				{ text: 'Nginx', link: '/favorites/Nginx/' },
 				{ text: 'Mac', link: '/favorites/Mac/' },
+				{ text: 'Canvas', link: '/favorites/Canvas/' },
+				{ text: 'Browser', link: '/favorites/Browser/' },
+				{ text: 'ProblemSolving', link: '/favorites/ProblemSolving/' },
 			]
 		},
 		// 社交账户链接

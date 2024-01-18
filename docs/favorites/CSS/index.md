@@ -16,6 +16,7 @@ layout: doc
 - [10 Useful CSS Tricks ](https://stackdiary.com/useful-css-tricks/#hacking-wordpress-with-css)
 - [CSS3剪贴路径（Clip-path）在线生成器工具](http://tools.jb51.net/code/css3path)
 - [CSS一些效果合集带源码](https://www.lingdaima.com/css/#/)
+- [CSS Animation(animista.net)](https://animista.net/)
 
 ## SCSS相关
 
