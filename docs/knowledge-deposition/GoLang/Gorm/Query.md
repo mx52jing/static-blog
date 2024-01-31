@@ -42,7 +42,7 @@ SELECT * FROM `teachers` ORDER BY `teachers`.`id` DESC LIMIT 1;
 
 ### `Take`
 
-- 获取一条记录，`没有指定排序字段`
+- 获取一条记录，`不指定排序字段`
 
 ```Go
 func queryByTake() {

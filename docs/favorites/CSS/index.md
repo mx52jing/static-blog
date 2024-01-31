@@ -17,6 +17,9 @@ layout: doc
 - [CSS3剪贴路径（Clip-path）在线生成器工具](http://tools.jb51.net/code/css3path)
 - [CSS一些效果合集带源码](https://www.lingdaima.com/css/#/)
 - [CSS Animation(animista.net)](https://animista.net/)
+- [纯css实现117个Loading效果（上）](https://juejin.cn/post/7037036742985121800)
+- [纯css实现117个Loading效果（中）](https://juejin.cn/post/7037636080539009038)
+- [纯css实现117个Loading效果（下）](https://juejin.cn/post/7037660617779445796-)
 
 ## SCSS相关
 
