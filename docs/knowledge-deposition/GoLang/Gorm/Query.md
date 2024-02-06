@@ -4,6 +4,18 @@ layout: doc
 
 # Query
 
+- 下面的操作都以该`Teacher`结构体为基础
+
+```Go
+type Teacher struct {
+	gorm.Model
+	Name    string `gorm:"type:varchar(32)"`
+	Age     uint8
+	Gender  uint8
+	Created int64 `gorm:"autoCreateTime:milli"`
+}
+```
+
 ## 检索单个
 
 ### `First`
@@ -58,7 +70,7 @@ func queryByTake() {
 SELECT * FROM `teachers` LIMIT 1
 ```
 
-## 根据主键查询
+### 使用`Take`根据`主键id`查询
 
 ```Go
 func queryByPrimaryKey() {
@@ -73,6 +85,24 @@ func queryByPrimaryKey() {
 ```SQL
 SELECT * FROM `teachers` WHERE `teachers`.`id` = 8 LIMIT 1;
 ```
+
+### 使用`Find`根据`主键id`查询
+
+```go
+func queryById() {
+	id := 6
+	var allT []Teacher
+	DB.Find(&allT, id)
+	fmt.Println("find by id's result allT =>", allT)
+}
+```
+
+> 相当于下面的`SQL`
+
+```SQL
+SELECT * FROM `teacher` WHERE `teacher`.`id` = 6
+```
+
 
 ## 查询全部
 
@@ -90,6 +120,7 @@ func queryAll() {
 ```SQL
 SELECT * FROM `teachers`;
 ```
+
 ## 条件查询
 
 ### `Where`
@@ -158,7 +189,26 @@ DB.Where(map[string]interface{}{"name": "如燕", "age": 0}).Find(&conditionT)
 
 ## 内联条件查询
 
-- 使用`内联条件`可以省略`Where`
+:::tip
+使用`内联条件`可以省略`Where`
+:::
+
+### 根据`主键id`查询
+
+```go
+func queryById() {
+	id := 6
+	var allT []Teacher
+	DB.Find(&allT, id)
+	fmt.Println("find by id's result allT =>", allT)
+}
+```
+
+> 相当于下面的`SQL`
+
+```SQL
+SELECT * FROM `teacher` WHERE `teacher`.`id` = 6
+```
 
 
 ### 使用普通查询条件

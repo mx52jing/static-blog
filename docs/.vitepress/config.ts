@@ -256,6 +256,9 @@ export default {
 								{ text: 'AdvancedQuery', link: '/knowledge-deposition/GoLang/Gorm/AdvancedQuery' },
 								{ text: 'Update', link: '/knowledge-deposition/GoLang/Gorm/Update' },
 								{ text: 'Delete', link: '/knowledge-deposition/GoLang/Gorm/Delete' },
+								{ text: '关联之一对一', link: '/knowledge-deposition/GoLang/Gorm/关联之一对一' },
+								{ text: '关联之一对多', link: '/knowledge-deposition/GoLang/Gorm/关联之一对多' },
+								{ text: '关联之多对多', link: '/knowledge-deposition/GoLang/Gorm/关联之多对多' },
 							]
 						},
 						{

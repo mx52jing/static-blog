@@ -4,6 +4,8 @@ layout: doc
 
 # Create
 
+- 下面的操作都以该`Teacher`结构体为基础
+
 ```Go
 type Teacher struct {
 	gorm.Model
@@ -13,9 +15,14 @@ type Teacher struct {
 	Created int64 `gorm:"autoCreateTime:milli"`
 }
 ```
+
 ## 创建记录
 
 ### 创建单条
+
+:::tip
+- `Create`函数的参数要传递`指针`，不能直接传结构体
+:::
 
 ```Go
 func createOneTeacher() {
@@ -40,10 +47,6 @@ func createMultiTeacher() {
 	DB.Create(&teachers)
 }
 ```
-
-:::tip
-- `Create`函数的参数要传递`指针`，不能直接传结构体
-:::
 
 ## 使用选择的字段创建
 
@@ -86,13 +89,13 @@ func createByOmitField() {
 INSERT INTO `teachers` (`created_at`,`updated_at`,`deleted_at`,`name`,`gender`) VALUES ('1998-07-18 22:55:59.691','1998-07-18 22:55:59.691',NULL,'如燕1号',1)
 ```
 
-### 通过`map`创建记录
+## 通过`map`创建记录
 
 :::tip
 通过`map`创建的数据，不会自动填充未设置值的数据
 :::
 
-#### 单个`map`
+### 单个`map`
 
 ```Go
 func createByMap() {
@@ -111,7 +114,7 @@ func createByMap() {
 INSERT INTO `teachers` (`age`,`gender`,`name`) VALUES (36,1,'mapName')
 ```
 
-#### 批量插入`map`
+### 批量插入`map`
 
 ```Go
 func createByMultiMap() {
