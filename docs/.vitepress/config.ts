@@ -259,6 +259,7 @@ export default {
 								{ text: '关联之一对一', link: '/knowledge-deposition/GoLang/Gorm/关联之一对一' },
 								{ text: '关联之一对多', link: '/knowledge-deposition/GoLang/Gorm/关联之一对多' },
 								{ text: '关联之多对多', link: '/knowledge-deposition/GoLang/Gorm/关联之多对多' },
+								{ text: '事务', link: '/knowledge-deposition/GoLang/Gorm/事务' },
 							]
 						},
 						{
