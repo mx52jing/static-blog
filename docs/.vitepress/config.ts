@@ -264,13 +264,28 @@ export default {
 							]
 						},
 						{
-							text: 'Logrus',
+							text: 'Logger',
 							collapsible: false,
 							collapsed: true,
 							items: [
-								{ text: '基础用法', link: '/knowledge-deposition/GoLang/Logrus/基础用法' },
-								{ text: 'Hook', link: '/knowledge-deposition/GoLang/Logrus/Hook' },
-								{ text: '日志分割', link: '/knowledge-deposition/GoLang/Logrus/日志分割' },
+								{
+									text: 'Logrus',
+									collapsible: false,
+									collapsed: true,
+									items: [
+										{ text: '基础用法', link: '/knowledge-deposition/GoLang/Logger/Logrus/基础用法' },
+										{ text: 'Hook', link: '/knowledge-deposition/GoLang/Logger/Logrus/Hook' },
+										{ text: '日志分割', link: '/knowledge-deposition/GoLang/Logger/Logrus/日志分割' },
+									]
+								},
+								{
+									text: 'Zap',
+									collapsible: false,
+									collapsed: true,
+									items: [
+										{ text: 'zap使用', link: '/knowledge-deposition/GoLang/Logger/Zap/zap使用' },
+									]
+								},
 							]
 						},
 						{
