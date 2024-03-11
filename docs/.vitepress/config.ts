@@ -88,7 +88,8 @@ export default {
 					collapsed: false,
 					items: [
 						{ text: '环境初始化', link: '/hand-notes/Mac/init'},
-						{ text: '使用小记', link: '/hand-notes/Mac/frequently-commands'}
+						{ text: '使用小记', link: '/hand-notes/Mac/frequently-commands'},
+						{ text: '快捷运行自定义shell脚本', link: '/hand-notes/Mac/快捷运行自定义shell脚本'}
 					]
 				},
 				{

@@ -49,7 +49,9 @@ brew autoremove
 - [终极 Shell](https://macshuo.com/?p=676)
 - [iTerm2 + Oh My Zsh 打造舒适终端体验](https://segmentfault.com/a/1190000014992947)
 
-### `bob`
+### `Bob`
+
+- [官网](https://bobtranslate.com/)
 
 ::: tip
 轻量级翻译软件
@@ -60,7 +62,7 @@ brew autoremove
 **配置参考**：
 
 - [macOS 翻译工具 Bob配置](https://sspai.com/post/62721)
-- [OpenAI Translator Bob Plugin](https://github.com/yetone/bob-plugin-openai-translator)
+- [OpenAI Translator Bob Plugin(ChatGPT翻译插件)](https://github.com/yetone/bob-plugin-openai-translator)
 
 ### `lrzsz`
 **配置参考**：

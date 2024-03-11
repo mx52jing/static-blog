@@ -262,7 +262,8 @@ go get -u gopkg.in/natefinch/lumberjack.v2
 - `MaxSize`：日志文件最大的尺寸(`MB`), 超限后开始自动分割
 - `MaxBackups`：保留旧文件的最大个数
 - `MaxAge`：保留旧文件的最大天数
-- `Compress`：是否压缩/归档旧文件
+- `Compress`：是否使用gzip压缩旧文件
+- `LocalTime`：确定备份文件中时间戳格式化所使用的时间是否为计算机的本地时间。默认情况下，使用`UTC`时间。
 
 ```Go
 // 初始化写入日志的位置/路径
