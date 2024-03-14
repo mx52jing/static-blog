@@ -19,7 +19,7 @@ export default {
 			{ text: '首页', link: '/' },
 			{ text: '随手一记', link: '/hand-notes/JavaScript/数字四舍五入' },
 			{ text: '知识沉淀', link: '/knowledge-deposition/前端工程化/Babel/Babel基础' },
-			{ text: '算法', link: '/algorithm/刷题' },
+			{ text: '算法', link: '/algorithm/刷题/1-两数之和' },
 			{ text: '收藏夹', link: '/favorites/CSS/' },
 		],
 		// 左侧边栏配置
@@ -317,6 +317,7 @@ export default {
 					collapsed: true,
 					items: [
 						{ text: '1-两数之和', link: '/algorithm/刷题/1-两数之和' },
+						{ text: '20-有效的括号', link: '/algorithm/刷题/20-有效的括号' },
 					]
 				}
 			],
