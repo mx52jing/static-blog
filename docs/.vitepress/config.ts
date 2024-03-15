@@ -318,6 +318,7 @@ export default {
 					items: [
 						{ text: '1-两数之和', link: '/algorithm/刷题/1-两数之和' },
 						{ text: '20-有效的括号', link: '/algorithm/刷题/20-有效的括号' },
+						{ text: '26-删除有序数组中的重复项', link: '/algorithm/刷题/26-删除有序数组中的重复项' },
 					]
 				}
 			],
