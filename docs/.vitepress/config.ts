@@ -332,6 +332,8 @@ export default {
 				{ text: 'Canvas', link: '/favorites/Canvas/' },
 				{ text: 'Browser', link: '/favorites/Browser/' },
 				{ text: 'ProblemSolving', link: '/favorites/ProblemSolving/' },
+				{ text: 'Docker', link: '/favorites/Docker/' },
+				{ text: '算法', link: '/favorites/算法/' },
 			]
 		},
 		// 社交账户链接
