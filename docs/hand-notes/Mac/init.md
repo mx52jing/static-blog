@@ -80,6 +80,15 @@ brew autoremove
 - [Hammerspoon - 岂止于窗口管理](https://zhuanlan.zhihu.com/p/72499152)
 - [免费又强大的 macOS 自动化工具Hammerspoon](https://sspai.com/post/53992)
 
+### charles
+
+::: tip
+抓包工具
+:::
+
+- [charles破解码](https://www.zzzmode.com/mytools/charles/)
+
+
 ## 开发环境配置
 
 ### `fnm`

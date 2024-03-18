@@ -320,6 +320,7 @@ export default {
 						{ text: '20-有效的括号', link: '/algorithm/刷题/20-有效的括号' },
 						{ text: '26-删除有序数组中的重复项', link: '/algorithm/刷题/26-删除有序数组中的重复项' },
 						{ text: '27-移除元素', link: '/algorithm/刷题/27-移除元素' },
+						{ text: '28-找出字符串中第一个匹配项的下标', link: '/algorithm/刷题/28-找出字符串中第一个匹配项的下标' },
 					]
 				}
 			],

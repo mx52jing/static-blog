@@ -153,3 +153,9 @@ Homebrew/homebrew-cask (Git revision 9a5bb968b6; last commit 2022-07-12)
 ```shell
 Git -C $(brew --repo homebrew/core) checkout master
 ```
+
+## Mac双开微信
+
+```shell
+open -n /Applications/WeChat.app/Contents/MacOS/WeChat
+```
