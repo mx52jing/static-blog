@@ -321,6 +321,7 @@ export default {
 						{ text: '26-删除有序数组中的重复项', link: '/algorithm/刷题/26-删除有序数组中的重复项' },
 						{ text: '27-移除元素', link: '/algorithm/刷题/27-移除元素' },
 						{ text: '28-找出字符串中第一个匹配项的下标', link: '/algorithm/刷题/28-找出字符串中第一个匹配项的下标' },
+						{ text: '3-无重复字符的最长子串', link: '/algorithm/刷题/3-无重复字符的最长子串' },
 					]
 				}
 			],
@@ -335,6 +336,8 @@ export default {
 				{ text: 'ProblemSolving', link: '/favorites/ProblemSolving/' },
 				{ text: 'Docker', link: '/favorites/Docker/' },
 				{ text: '算法', link: '/favorites/算法/' },
+				{ text: 'UI设计灵感', link: '/favorites/UI设计灵感/' },
+				{ text: '其他', link: '/favorites/其他/' },
 			]
 		},
 		// 社交账户链接
