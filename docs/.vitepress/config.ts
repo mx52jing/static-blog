@@ -323,6 +323,7 @@ export default {
 						{ text: '28-找出字符串中第一个匹配项的下标', link: '/algorithm/刷题/28-找出字符串中第一个匹配项的下标' },
 						{ text: '3-无重复字符的最长子串', link: '/algorithm/刷题/3-无重复字符的最长子串' },
 						{ text: '35-搜索插入位置', link: '/algorithm/刷题/35-搜索插入位置' },
+						{ text: '14-最长公共前缀', link: '/algorithm/刷题/14-最长公共前缀' },
 					]
 				}
 			],
