@@ -12,3 +12,7 @@ layout: doc
 ## fonts
 
 - [TCloudNumber-好看的数字字体](https://cloud.tencent.com/developer/article/2350218)-[字体下载地址](https://tdesign.tencent.com/design/fonts)
+
+## Internet Related
+
+- [Scientific Internet access](https://github.com/bannedbook)
