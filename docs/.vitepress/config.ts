@@ -324,6 +324,7 @@ export default {
 						{ text: '3-无重复字符的最长子串', link: '/algorithm/刷题/3-无重复字符的最长子串' },
 						{ text: '35-搜索插入位置', link: '/algorithm/刷题/35-搜索插入位置' },
 						{ text: '14-最长公共前缀', link: '/algorithm/刷题/14-最长公共前缀' },
+						{ text: '58-最后一个单词的长度', link: '/algorithm/刷题/58-最后一个单词的长度' },
 					]
 				}
 			],
