@@ -325,6 +325,7 @@ export default {
 						{ text: '35-搜索插入位置', link: '/algorithm/刷题/35-搜索插入位置' },
 						{ text: '14-最长公共前缀', link: '/algorithm/刷题/14-最长公共前缀' },
 						{ text: '58-最后一个单词的长度', link: '/algorithm/刷题/58-最后一个单词的长度' },
+						{ text: '136-只出现一次的数字', link: '/algorithm/刷题/136-只出现一次的数字' },
 					]
 				}
 			],
