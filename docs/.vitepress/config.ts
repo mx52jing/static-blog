@@ -19,7 +19,7 @@ export default {
 			{ text: '首页', link: '/' },
 			{ text: '随手一记', link: '/hand-notes/JavaScript/数字四舍五入' },
 			{ text: '知识沉淀', link: '/knowledge-deposition/前端工程化/Babel/Babel基础' },
-			{ text: '算法', link: '/algorithm/刷题/1-两数之和' },
+			{ text: '算法', link: '/algorithm/LeetCode刷题/1-两数之和' },
 			{ text: '收藏夹', link: '/favorites/CSS/' },
 		],
 		// 左侧边栏配置
@@ -33,6 +33,7 @@ export default {
 						{ text: '数字四舍五入', link: '/hand-notes/JavaScript/数字四舍五入' },
 						{ text: '根据生日计算年龄', link: '/hand-notes/JavaScript/根据生日计算年龄' },
 						{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/控制并发执行函数' },
+						{ text: '随机数的应用', link: '/hand-notes/JavaScript/随机数的应用' },
 					]
 				},
 				{
@@ -312,20 +313,21 @@ export default {
 			],
 			'/algorithm/': [
 				{
-					text: "刷题",
+					text: "LeetCode刷题",
 					collapsible: false,
 					collapsed: true,
 					items: [
-						{ text: '1-两数之和', link: '/algorithm/刷题/1-两数之和' },
-						{ text: '20-有效的括号', link: '/algorithm/刷题/20-有效的括号' },
-						{ text: '26-删除有序数组中的重复项', link: '/algorithm/刷题/26-删除有序数组中的重复项' },
-						{ text: '27-移除元素', link: '/algorithm/刷题/27-移除元素' },
-						{ text: '28-找出字符串中第一个匹配项的下标', link: '/algorithm/刷题/28-找出字符串中第一个匹配项的下标' },
-						{ text: '3-无重复字符的最长子串', link: '/algorithm/刷题/3-无重复字符的最长子串' },
-						{ text: '35-搜索插入位置', link: '/algorithm/刷题/35-搜索插入位置' },
-						{ text: '14-最长公共前缀', link: '/algorithm/刷题/14-最长公共前缀' },
-						{ text: '58-最后一个单词的长度', link: '/algorithm/刷题/58-最后一个单词的长度' },
-						{ text: '136-只出现一次的数字', link: '/algorithm/刷题/136-只出现一次的数字' },
+						{ text: '1-两数之和', link: '/algorithm/LeetCode刷题/1-两数之和' },
+						{ text: '20-有效的括号', link: '/algorithm/LeetCode刷题/20-有效的括号' },
+						{ text: '26-删除有序数组中的重复项', link: '/algorithm/LeetCode刷题/26-删除有序数组中的重复项' },
+						{ text: '27-移除元素', link: '/algorithm/LeetCode刷题/27-移除元素' },
+						{ text: '28-找出字符串中第一个匹配项的下标', link: '/algorithm/LeetCode刷题/28-找出字符串中第一个匹配项的下标' },
+						{ text: '3-无重复字符的最长子串', link: '/algorithm/LeetCode刷题/3-无重复字符的最长子串' },
+						{ text: '35-搜索插入位置', link: '/algorithm/LeetCode刷题/35-搜索插入位置' },
+						{ text: '14-最长公共前缀', link: '/algorithm/LeetCode刷题/14-最长公共前缀' },
+						{ text: '58-最后一个单词的长度', link: '/algorithm/LeetCode刷题/58-最后一个单词的长度' },
+						{ text: '136-只出现一次的数字', link: '/algorithm/LeetCode刷题/136-只出现一次的数字' },
+						{ text: 'LCR-018-验证回文串', link: '/algorithm/LeetCode刷题/LCR-018-验证回文串' },
 					]
 				}
 			],
