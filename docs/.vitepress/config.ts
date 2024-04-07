@@ -328,6 +328,7 @@ export default {
 						{ text: '58-最后一个单词的长度', link: '/algorithm/LeetCode刷题/58-最后一个单词的长度' },
 						{ text: '136-只出现一次的数字', link: '/algorithm/LeetCode刷题/136-只出现一次的数字' },
 						{ text: 'LCR-018-验证回文串', link: '/algorithm/LeetCode刷题/LCR-018-验证回文串' },
+						{ text: '9-回文数', link: '/algorithm/LeetCode刷题/9-回文数' },
 					]
 				}
 			],
