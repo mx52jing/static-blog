@@ -329,6 +329,7 @@ export default {
 						{ text: '136-只出现一次的数字', link: '/algorithm/LeetCode刷题/136-只出现一次的数字' },
 						{ text: 'LCR-018-验证回文串', link: '/algorithm/LeetCode刷题/LCR-018-验证回文串' },
 						{ text: '9-回文数', link: '/algorithm/LeetCode刷题/9-回文数' },
+						{ text: '17-电话号码的字母组合', link: '/algorithm/LeetCode刷题/17-电话号码的字母组合' },
 					]
 				}
 			],
