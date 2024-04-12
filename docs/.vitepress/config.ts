@@ -331,6 +331,7 @@ export default {
 						{ text: '9-回文数', link: '/algorithm/LeetCode刷题/9-回文数' },
 						{ text: '17-电话号码的字母组合', link: '/algorithm/LeetCode刷题/17-电话号码的字母组合' },
 						{ text: '202-快乐数', link: '/algorithm/LeetCode刷题/202-快乐数' },
+						{ text: '485-最大连续1的个数', link: '/algorithm/LeetCode刷题/485-最大连续1的个数' },
 					]
 				}
 			],
