@@ -332,6 +332,7 @@ export default {
 						{ text: '17-电话号码的字母组合', link: '/algorithm/LeetCode刷题/17-电话号码的字母组合' },
 						{ text: '202-快乐数', link: '/algorithm/LeetCode刷题/202-快乐数' },
 						{ text: '485-最大连续1的个数', link: '/algorithm/LeetCode刷题/485-最大连续1的个数' },
+						{ text: '628-三个数的最大乘积', link: '/algorithm/LeetCode刷题/628-三个数的最大乘积' },
 					]
 				}
 			],
