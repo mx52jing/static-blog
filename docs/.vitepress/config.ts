@@ -334,6 +334,7 @@ export default {
 						{ text: '485-最大连续1的个数', link: '/algorithm/LeetCode刷题/485-最大连续1的个数' },
 						{ text: '628-三个数的最大乘积', link: '/algorithm/LeetCode刷题/628-三个数的最大乘积' },
 						{ text: '414-第三大的数', link: '/algorithm/LeetCode刷题/414-第三大的数' },
+						{ text: '520-检测大写字母', link: '/algorithm/LeetCode刷题/520-检测大写字母' },
 					]
 				}
 			],
