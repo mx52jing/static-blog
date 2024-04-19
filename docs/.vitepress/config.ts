@@ -336,6 +336,7 @@ export default {
 						{ text: '414-第三大的数', link: '/algorithm/LeetCode刷题/414-第三大的数' },
 						{ text: '520-检测大写字母', link: '/algorithm/LeetCode刷题/520-检测大写字母' },
 						{ text: '977-有序数组的平方', link: '/algorithm/LeetCode刷题/977-有序数组的平方' },
+						{ text: '209-长度最小的子数组', link: '/algorithm/LeetCode刷题/209-长度最小的子数组' },
 					]
 				}
 			],
