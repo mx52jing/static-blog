@@ -338,6 +338,7 @@ export default {
 						{ text: '977-有序数组的平方', link: '/algorithm/LeetCode刷题/977-有序数组的平方' },
 						{ text: '209-长度最小的子数组', link: '/algorithm/LeetCode刷题/209-长度最小的子数组' },
 						{ text: '203-移除链表元素', link: '/algorithm/LeetCode刷题/203-移除链表元素' },
+						{ text: '707-设计链表', link: '/algorithm/LeetCode刷题/707-设计链表' },
 					]
 				}
 			],
