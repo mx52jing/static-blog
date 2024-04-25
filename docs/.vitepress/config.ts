@@ -339,6 +339,7 @@ export default {
 						{ text: '209-长度最小的子数组', link: '/algorithm/LeetCode刷题/209-长度最小的子数组' },
 						{ text: '203-移除链表元素', link: '/algorithm/LeetCode刷题/203-移除链表元素' },
 						{ text: '707-设计链表', link: '/algorithm/LeetCode刷题/707-设计链表' },
+						{ text: '206-反转链表', link: '/algorithm/LeetCode刷题/206-反转链表' },
 					]
 				}
 			],
