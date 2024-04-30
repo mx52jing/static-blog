@@ -342,6 +342,7 @@ export default {
 						{ text: '203-移除链表元素', link: '/algorithm/LeetCode刷题/203-移除链表元素' },
 						{ text: '707-设计链表', link: '/algorithm/LeetCode刷题/707-设计链表' },
 						{ text: '206-反转链表', link: '/algorithm/LeetCode刷题/206-反转链表' },
+						{ text: '24-两两交换链表中的节点', link: '/algorithm/LeetCode刷题/24-两两交换链表中的节点' },
 					]
 				}
 			],
