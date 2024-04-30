@@ -82,6 +82,9 @@ export default {
 						{ text: 'Bash实用方法', link: '/hand-notes/Linux/practice-method'},
 						{ text: '图片压缩和格式转换', link: '/hand-notes/Linux/图片压缩和格式转换'},
 						{ text: '计算升级版本号', link: '/hand-notes/Linux/计算升级版本号'},
+						{ text: '文件压缩', link: '/hand-notes/Linux/文件压缩'},
+						{ text: '用户操作相关', link: '/hand-notes/Linux/用户操作相关'},
+						{ text: '权限相关', link: '/hand-notes/Linux/权限相关'},
 					]
 				},
 				{
@@ -171,8 +174,7 @@ export default {
 					collapsible: false,
 					collapsed: false,
 					items: [
-						{ text: 'Bash 基础知识', link: '/knowledge-deposition/Linux/Bash基础知识'},
-						{ text: '文件压缩', link: '/knowledge-deposition/Linux/文件压缩'},
+						{ text: 'Bash基础知识', link: '/knowledge-deposition/Linux/Bash基础知识'},
 					]
 				},
 				{
