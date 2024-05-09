@@ -37,6 +37,21 @@ export default {
 					]
 				},
 				{
+					text: 'React',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{
+							text: 'ProComponents',
+							collapsible: false,
+							collapsed: false,
+							items: [
+								{ text: 'ProTable', link: '/hand-notes/React/ProComponents/ProTable' },
+							]
+						},
+					]
+				},
+				{
 					text: 'Chart',
 					collapsible: false,
 					collapsed: false,
@@ -46,7 +61,7 @@ export default {
 							collapsible: false,
 							collapsed: false,
 							items: [
-								{ text: '使用小记', link: '/hand-notes/Chart/AntVF2/使用小记'}
+								{ text: '使用小记', link: '/hand-notes/Chart/AntVF2/使用小记'},
 							]
 						}
 					]
@@ -343,6 +358,7 @@ export default {
 						{ text: '707-设计链表', link: '/algorithm/LeetCode刷题/707-设计链表' },
 						{ text: '206-反转链表', link: '/algorithm/LeetCode刷题/206-反转链表' },
 						{ text: '24-两两交换链表中的节点', link: '/algorithm/LeetCode刷题/24-两两交换链表中的节点' },
+						{ text: '19-删除链表的倒数第N个结点', link: '/algorithm/LeetCode刷题/19-删除链表的倒数第N个结点' },
 					]
 				}
 			],
