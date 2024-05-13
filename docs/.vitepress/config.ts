@@ -34,6 +34,7 @@ export default {
 						{ text: '根据生日计算年龄', link: '/hand-notes/JavaScript/根据生日计算年龄' },
 						{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/控制并发执行函数' },
 						{ text: '随机数的应用', link: '/hand-notes/JavaScript/随机数的应用' },
+						{ text: '判断字母大小写', link: '/hand-notes/JavaScript/判断字母大小写' },
 					]
 				},
 				{
@@ -359,6 +360,7 @@ export default {
 						{ text: '206-反转链表', link: '/algorithm/LeetCode刷题/206-反转链表' },
 						{ text: '24-两两交换链表中的节点', link: '/algorithm/LeetCode刷题/24-两两交换链表中的节点' },
 						{ text: '19-删除链表的倒数第N个结点', link: '/algorithm/LeetCode刷题/19-删除链表的倒数第N个结点' },
+						{ text: '242-有效的字母异位词', link: '/algorithm/LeetCode刷题/242-有效的字母异位词' },
 					]
 				}
 			],
