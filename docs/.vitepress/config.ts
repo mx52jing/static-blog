@@ -362,6 +362,7 @@ export default {
 						{ text: '19-删除链表的倒数第N个结点', link: '/algorithm/LeetCode刷题/19-删除链表的倒数第N个结点' },
 						{ text: '242-有效的字母异位词', link: '/algorithm/LeetCode刷题/242-有效的字母异位词' },
 						{ text: '349-两个数组的交集', link: '/algorithm/LeetCode刷题/349-两个数组的交集' },
+						{ text: '454-四数相加II', link: '/algorithm/LeetCode刷题/454-四数相加II' },
 					]
 				}
 			],
