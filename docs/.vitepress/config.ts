@@ -363,6 +363,7 @@ export default {
 						{ text: '242-有效的字母异位词', link: '/algorithm/LeetCode刷题/242-有效的字母异位词' },
 						{ text: '349-两个数组的交集', link: '/algorithm/LeetCode刷题/349-两个数组的交集' },
 						{ text: '454-四数相加II', link: '/algorithm/LeetCode刷题/454-四数相加II' },
+						{ text: '15-三数之和', link: '/algorithm/LeetCode刷题/15-三数之和' },
 					]
 				}
 			],
