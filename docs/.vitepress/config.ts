@@ -365,6 +365,7 @@ export default {
 						{ text: '454-四数相加II', link: '/algorithm/LeetCode刷题/454-四数相加II' },
 						{ text: '15-三数之和', link: '/algorithm/LeetCode刷题/15-三数之和' },
 						{ text: '18-四数之和', link: '/algorithm/LeetCode刷题/18-四数之和' },
+						{ text: '344-反转字符串', link: '/algorithm/LeetCode刷题/344-反转字符串' },
 					]
 				}
 			],
