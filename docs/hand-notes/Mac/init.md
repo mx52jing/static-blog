@@ -5,6 +5,7 @@ layout: doc
 # Mac环境初始化
 
 ## `Mac`软件
+----------------------------
 ### `Homebrew`
 
 [官网地址](https://brew.sh/)
@@ -41,13 +42,25 @@ brew autoremove
 
 [官网地址](https://iterm2.com/)
 
-**好用的插件**
+#### **好用的插件**
 - `zsh-autosuggestions`根据历史命令自动补全，查看详情点击[这里](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 - `zsh-syntax-highlighting`高亮输入的命令，查看详情点击[这里](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-**配置参考**：
+#### **配置参考**：
 - [终极 Shell](https://macshuo.com/?p=676)
 - [iTerm2 + Oh My Zsh 打造舒适终端体验](https://segmentfault.com/a/1190000014992947)
+
+
+### `Warp`
+
+::: tip
+基于`Rust`开发的新一代terminal，可以替代iterm2
+:::
+
+[官网地址](https://www.warp.dev/)
+
+> Warp is a modern, Rust-based terminal with AI built in so you and your team can build great software, faster.
+
 
 ### `Bob`
 
@@ -59,13 +72,14 @@ brew autoremove
 
 推荐配置（翻译）`彩云小译`、`Google翻译插件`；`（OCR）百度云`
 
-**配置参考**：
+#### **配置参考**：
 
 - [macOS 翻译工具 Bob配置](https://sspai.com/post/62721)
 - [OpenAI Translator Bob Plugin(ChatGPT翻译插件)](https://github.com/yetone/bob-plugin-openai-translator)
 
 ### `lrzsz`
-**配置参考**：
+
+#### **配置参考**：
 
 - [使用rz和sz来实现文件上传下载](https://segmentfault.com/a/1190000012166969)
 
@@ -76,7 +90,7 @@ brew autoremove
 
 [官网地址](https://www.hammerspoon.org/)
 
-**配置参考**：
+#### **配置参考**：
 - [Hammerspoon - 岂止于窗口管理](https://zhuanlan.zhihu.com/p/72499152)
 - [免费又强大的 macOS 自动化工具Hammerspoon](https://sspai.com/post/53992)
 
