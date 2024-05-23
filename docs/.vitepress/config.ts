@@ -366,6 +366,7 @@ export default {
 						{ text: '15-三数之和', link: '/algorithm/LeetCode刷题/15-三数之和' },
 						{ text: '18-四数之和', link: '/algorithm/LeetCode刷题/18-四数之和' },
 						{ text: '344-反转字符串', link: '/algorithm/LeetCode刷题/344-反转字符串' },
+						{ text: '541-反转字符串II', link: '/algorithm/LeetCode刷题/541-反转字符串II' },
 					]
 				}
 			],
