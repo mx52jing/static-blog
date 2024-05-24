@@ -381,6 +381,7 @@ export default {
 				{ text: 'ProblemSolving', link: '/favorites/ProblemSolving/' },
 				{ text: 'Docker', link: '/favorites/Docker/' },
 				{ text: '算法', link: '/favorites/算法/' },
+				{ text: 'Golang', link: '/favorites/Golang/' },
 				{ text: 'IDE', link: '/favorites/IDE/' },
 				{ text: 'UI设计灵感', link: '/favorites/UI设计灵感/' },
 				{ text: 'Books', link: '/favorites/Books/' },
