@@ -10,6 +10,7 @@ layout: doc
 
 - [网页画图工具excalidraw](https://excalidraw.com/)
 - [帮小忙(腾讯QQ浏览器在线工具箱)](https://tool.browser.qq.com/)
+- [IT人必备工作箱](https://666666.dev/#/)
 
 ## fonts
 

@@ -369,6 +369,7 @@ export default {
 						{ text: '541-反转字符串II', link: '/algorithm/LeetCode刷题/541-反转字符串II' },
 						{ text: '151-反转字符串中的单词', link: '/algorithm/LeetCode刷题/151-反转字符串中的单词' },
 						{ text: '1047-删除字符串中的所有相邻重复项', link: '/algorithm/LeetCode刷题/1047-删除字符串中的所有相邻重复项' },
+						{ text: '150-逆波兰表达式求值', link: '/algorithm/LeetCode刷题/150-逆波兰表达式求值' },
 					]
 				}
 			],
