@@ -370,7 +370,7 @@ export default {
 						{ text: '151-反转字符串中的单词', link: '/algorithm/LeetCode刷题/151-反转字符串中的单词' },
 						{ text: '1047-删除字符串中的所有相邻重复项', link: '/algorithm/LeetCode刷题/1047-删除字符串中的所有相邻重复项' },
 						{ text: '150-逆波兰表达式求值', link: '/algorithm/LeetCode刷题/150-逆波兰表达式求值' },
-						{ text: '144-145-94-遍历二叉树', link: '/algorithm/LeetCode刷题/144-145-94-遍历二叉树' },
+						{ text: '144-94-145-遍历二叉树', link: '/algorithm/LeetCode刷题/144-94-145-遍历二叉树' },
 					]
 				}
 			],
