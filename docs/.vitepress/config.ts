@@ -219,6 +219,7 @@ export default {
 								{ text: '通道channel', link: '/knowledge-deposition/GoLang/基础知识/通道channel'},
 								{ text: 'Select', link: '/knowledge-deposition/GoLang/基础知识/Select'},
 								{ text: 'time包', link: '/knowledge-deposition/GoLang/基础知识/time包'},
+								{ text: 'url包', link: '/knowledge-deposition/GoLang/基础知识/url包'},
 								{ text: 'json序列化', link: '/knowledge-deposition/GoLang/基础知识/json序列化'},
 								{ text: 'Context', link: '/knowledge-deposition/GoLang/基础知识/Context'},
 								{
@@ -310,11 +311,11 @@ export default {
 							]
 						},
 						{
-							text: "爬虫",
+							text: "Crawler",
 							collapsible: false,
 							collapsed: true,
 							items: [
-								{ text: 'HTTP请求方法', link: '/knowledge-deposition/GoLang/爬虫/HTTP请求方法' },
+								{ text: 'HTTP请求方法', link: '/knowledge-deposition/GoLang/Crawler/HTTP请求方法' },
 							]
 						},
 						{

@@ -75,7 +75,7 @@ const columns = [
         // 使用search.transform 实现 表格搜索姓名时，搜索字段不使用column的dataIndex，而使用自定义的key
         // 默认表格搜索传的params是 { realName: "xxx" }, 使用transform转换后，搜索传的param是 { userId: "xxx" }
         search: {
-  [Chart](..%2F..%2FChart)          transform: (value: any) => {
+            transform: (value: any) => {
                 return { userId: value }
             }
         },
