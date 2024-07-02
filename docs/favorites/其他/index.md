@@ -23,3 +23,6 @@ layout: doc
 ## Resource
 
 - [各个框架/UI库/工具库/网站汇总](https://hello-nav.github.io/)
+
+- [有趣、入门级开源项目平台](https://hellogithub.com/) 
+- [python-guide-for-javascript-engineers](https://luckrnx09.com/python-guide-for-javascript-engineers/)
