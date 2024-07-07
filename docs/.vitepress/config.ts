@@ -384,6 +384,7 @@ export default {
 				{ text: 'Canvas', link: '/favorites/Canvas/' },
 				{ text: 'Browser', link: '/favorites/Browser/' },
 				{ text: 'ProblemSolving', link: '/favorites/ProblemSolving/' },
+				{ text: 'React', link: '/favorites/React/' },
 				{ text: 'Docker', link: '/favorites/Docker/' },
 				{ text: '算法', link: '/favorites/算法/' },
 				{ text: 'Golang', link: '/favorites/Golang/' },
