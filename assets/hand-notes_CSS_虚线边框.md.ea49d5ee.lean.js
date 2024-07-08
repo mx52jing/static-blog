@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,e as p}from"./app.24f48180.js";const i=JSON.parse('{"title":"虚线边框","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"hand-notes/CSS/虚线边框.md"}'),l={name:"hand-notes/CSS/虚线边框.md"},o=p("",4),e=[o];function t(r,c,C,D,F,y){return n(),a("div",null,e)}const d=s(l,[["render",t]]);export{i as __pageData,d as default};
