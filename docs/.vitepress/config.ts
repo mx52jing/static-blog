@@ -78,6 +78,7 @@ export default {
 						{ text: 'CSS模拟数字loading', 'link': '/hand-notes/CSS/CSS模拟数字loading'},
 						{ text: '实现高度过渡', 'link': '/hand-notes/CSS/实现高度过渡'},
 						{ text: 'CSS实现类似微信头像效果', 'link': '/hand-notes/CSS/CSS实现类似微信头像效果'},
+						{ text: '虚线边框', 'link': '/hand-notes/CSS/虚线边框'},
 					]
 				},
 				{
