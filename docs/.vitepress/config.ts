@@ -89,6 +89,7 @@ export default {
 						{ text: 'sass小技巧', 'link': '/hand-notes/Sass/sass小技巧'},
 						{ text: '通过mixin简化响应式代码', 'link': '/hand-notes/Sass/通过mixin简化响应式代码'},
 						{ text: 'sass实现星空效果', 'link': '/hand-notes/Sass/sass实现星空效果'},
+						{ text: '小球交互loading', 'link': '/hand-notes/Sass/小球交互loading'},
 					]
 				},
 				{
