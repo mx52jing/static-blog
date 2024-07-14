@@ -391,6 +391,7 @@ export default {
 				{ text: '算法', link: '/favorites/算法/' },
 				{ text: 'Golang', link: '/favorites/Golang/' },
 				{ text: 'IDE', link: '/favorites/IDE/' },
+				{ text: 'Linux', link: '/favorites/Linux/' },
 				{ text: 'UI设计灵感', link: '/favorites/UI设计灵感/' },
 				{ text: 'Books', link: '/favorites/Books/' },
 				{ text: '其他', link: '/favorites/其他/' },
