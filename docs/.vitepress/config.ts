@@ -79,6 +79,7 @@ export default {
 						{ text: '实现高度过渡', 'link': '/hand-notes/CSS/实现高度过渡'},
 						{ text: 'CSS实现类似微信头像效果', 'link': '/hand-notes/CSS/CSS实现类似微信头像效果'},
 						{ text: '虚线边框', 'link': '/hand-notes/CSS/虚线边框'},
+						{ text: '图片加载出错样式设置', 'link': '/hand-notes/CSS/图片加载出错样式设置'},
 					]
 				},
 				{

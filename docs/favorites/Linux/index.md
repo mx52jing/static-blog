@@ -6,4 +6,4 @@ layout: doc
 
 - [Linux命令大全搜索工具](https://github.com/jaywcjlove/linux-command)
 
-- [explainshell.com](https://explainshell.com/)
+- [explainshell](https://explainshell.com/)
