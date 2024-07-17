@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r,e as a}from"./app.da4d0b8a.js";const g=JSON.parse('{"title":"Git","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"favorites/Git/index.md"}'),i={name:"favorites/Git/index.md"},n=a("",2),o=[n];function l(s,_,c,h,f,p){return r(),t("div",null,o)}const m=e(i,[["render",l]]);export{g as __pageData,m as default};
