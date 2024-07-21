@@ -94,6 +94,14 @@ export default {
 					]
 				},
 				{
+					text: 'Canvas',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: '绘制图片不清晰问题', 'link': '/hand-notes/Canvas/绘制图片不清晰问题'},
+					]
+				},
+				{
 					text: 'Linux',
 					collapsible: false,
 					collapsed: false,
