@@ -339,7 +339,15 @@ export default {
 							]
 						}
 					]
-				}
+				},
+				{
+					text: 'Nacos',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: '基本概念和安装启动', link: '/knowledge-deposition/Nacos/基本概念和安装启动'},
+					]
+				},
 			],
 			'/algorithm/': [
 				{
