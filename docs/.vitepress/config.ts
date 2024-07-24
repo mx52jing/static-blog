@@ -346,6 +346,7 @@ export default {
 					collapsed: false,
 					items: [
 						{ text: '基本概念和安装启动', link: '/knowledge-deposition/Nacos/基本概念和安装启动'},
+						{ text: '操作动态配置文件', link: '/knowledge-deposition/Nacos/操作动态配置文件'},
 					]
 				},
 			],
