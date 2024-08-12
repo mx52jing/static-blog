@@ -357,6 +357,7 @@ export default {
 						{ text: '基本概念和安装启动', link: '/knowledge-deposition/RabbitMQ/基本概念和安装启动'},
 						{ text: '工作队列', link: '/knowledge-deposition/RabbitMQ/工作队列'},
 						{ text: '发布订阅', link: '/knowledge-deposition/RabbitMQ/发布订阅'},
+						{ text: 'Routing', link: '/knowledge-deposition/RabbitMQ/Routing'},
 					]
 				},
 			],
