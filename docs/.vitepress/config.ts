@@ -132,6 +132,14 @@ export default {
 						{ text: '抓包配置', link: '/hand-notes/Charles/抓包配置' },
 						{ text: '修改请求或响应', link: '/hand-notes/Charles/修改请求或响应' },
 					]
+				},
+				{
+					text: 'Git',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: 'Mac环境下和Windows环境下Git换行结尾冲突', link: '/hand-notes/Git/Mac环境下和Windows环境下Git换行结尾冲突' },
+					]
 				}
 			],
 			'/knowledge-deposition/': [
@@ -358,6 +366,7 @@ export default {
 						{ text: '工作队列', link: '/knowledge-deposition/RabbitMQ/工作队列'},
 						{ text: '发布订阅', link: '/knowledge-deposition/RabbitMQ/发布订阅'},
 						{ text: 'Routing', link: '/knowledge-deposition/RabbitMQ/Routing'},
+						// { text: 'Topics', link: '/knowledge-deposition/RabbitMQ/Topics'},
 					]
 				},
 			],
