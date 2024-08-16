@@ -106,6 +106,12 @@ core.safecrlf=true
 git add --renormalize .
 ```
 
-> 这个命令会重新扫描所有的文件，并根据当前的`Git`配置(包括`core.autocrlf`和`.gitattributes(可选，我没配置这个文件)`)规范化它们的换行符。
+> 这个命令会重新扫描所有的文件，并根据当前的`Git`配置(包括`core.autocrlf`和`.gitattributes(可选，另一种方法，我没配置这个文件)`)规范化它们的换行符。
 
-> 然后我将上面的修改提交后重新`merge`，就是正常的修改的代码了
+> 然后我将上面的修改提交后重新`merge`，现在的冲突都是代码层面的冲突，没有格式冲突了，然后就可以正常的修改的代码了
+
+## 参考
+
+- [Git 多平台换行符问题(LF or CRLF)](https://kuanghy.github.io/2017/03/19/git-lf-or-crlf)
+
+- [Windows环境和Mac环境下Git换行结尾冲突](https://blog.asroads.com/post/e037b783.html)
