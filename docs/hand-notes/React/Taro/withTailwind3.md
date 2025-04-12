@@ -55,6 +55,46 @@ module.exports = {
 @import 'tailwindcss/utilities';
 ```
 
+上面配置可能报错
+```shell
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import 'tailwindcss/base';
+  │         ^^^^^^^^^^^^^^^^^^
+  ╵
+    src/app.scss 1:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import 'tailwindcss/components';
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    src/app.scss 2:9  root stylesheet
+
+Deprecation Warning [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import 'tailwindcss/utilities';
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    src/app.scss 3:9  root stylesheet
+```
+
+**解决方案**：将`src/app.scss`修改内容为如下内容即可：
+```scss
+@use 'tailwindcss/base' as *;
+@use 'tailwindcss/components' as *;
+@use 'tailwindcss/utilities' as *;
+```
+
 ## 安装`weapp-tailwindcss`
 
 ```shell
