@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,e as t}from"./app.e51a11ea.js";const m=JSON.parse('{"title":"Mac","description":"","frontmatter":{},"headers":[],"relativePath":"favorites/Mac/index.md"}'),c={name:"favorites/Mac/index.md"},i=t("",2),n=[i];function o(s,_,l,p,h,d){return r(),a("div",null,n)}const u=e(c,[["render",o]]);export{m as __pageData,u as default};
