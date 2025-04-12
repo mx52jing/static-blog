@@ -50,6 +50,14 @@ export default {
 								{ text: 'ProTable', link: '/hand-notes/React/ProComponents/ProTable' },
 							]
 						},
+						{
+							text: 'Taro',
+							collapsible: false,
+							collapsed: false,
+							items: [
+								{ text: 'Taro 中使用tailwindcss 3.x版本', link: '/hand-notes/React/Taro/withTailwind3' },
+							]
+						}
 					]
 				},
 				{
@@ -141,7 +149,15 @@ export default {
 					items: [
 						{ text: 'Mac环境下和Windows环境下Git换行结尾冲突', link: '/hand-notes/Git/Mac环境下和Windows环境下Git换行结尾冲突' },
 					]
-				}
+				},
+				{
+					text: 'Nginx',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: '查找Nginx安装路径', link: '/hand-notes/Nginx/查找Nginx安装路径' },
+					]
+				},
 			],
 			'/knowledge-deposition/': [
 				{
