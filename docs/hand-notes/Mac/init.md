@@ -153,9 +153,19 @@ Node版本管理工具
 brew install jenv
 ```
 
-- 安装`JDK`
+- 手动安装`JDK`
   - [JDK8地址](https://www.oracle.com/java/technologies/downloads/#java8)
   - [JDK11地址](https://www.oracle.com/java/technologies/downloads/#java11)
+
+
+- 可以使用`brew`安装`jdk`
+
+```shell
+# 使用Homebrew搜索JDK
+brew search openjdk
+# 安装OpenJDK8
+brew install openjdk@8
+```
 
 - 配置
 ```shell
@@ -164,7 +174,7 @@ echo 'eval "$(jenv init -)"' >> ~/.zshrc
 ```
 - 添加`JDK`版本
 ```shell
-jenv add /usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/
+jenv add /opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home
 ```
 - 管理`JDK`版本
 ```shell
