@@ -35,6 +35,7 @@ export default {
 						{ text: '控制并发执行函数', link: '/hand-notes/JavaScript/控制并发执行函数' },
 						{ text: '随机数的应用', link: '/hand-notes/JavaScript/随机数的应用' },
 						{ text: '判断字母大小写', link: '/hand-notes/JavaScript/判断字母大小写' },
+						{ text: '验证身份证号', link: '/hand-notes/JavaScript/身份证校验' },
 					]
 				},
 				{
@@ -156,6 +157,14 @@ export default {
 					collapsed: false,
 					items: [
 						{ text: '查找Nginx安装路径', link: '/hand-notes/Nginx/查找Nginx安装路径' },
+					]
+				},
+				{
+					text: 'Tauri',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: '跑通android App', link: '/hand-notes/Tauri/runAndroidDev' },
 					]
 				},
 			],
