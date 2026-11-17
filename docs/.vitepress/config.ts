@@ -375,6 +375,14 @@ export default {
 					]
 				},
 				{
+					text: 'Python',
+					collapsible: false,
+					collapsed: false,
+					items: [
+						{ text: 'Python速通', link: '/knowledge-deposition/Python/Python速通'},
+					]
+				},
+				{
 					text: 'Nacos',
 					collapsible: false,
 					collapsed: false,
